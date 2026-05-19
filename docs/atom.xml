@@ -5,8 +5,34 @@
     <link rel="self" type="application/atom+xml" href="https://nothing-r.github.io/FAKE-SYSTEM/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-05-13T00:00:00+00:00</updated>
+    <updated>2026-05-19T00:00:00+00:00</updated>
     <id>https://nothing-r.github.io/FAKE-SYSTEM/atom.xml</id>
+    <entry xml:lang="en">
+        <title>How to sestUp bangal on ARCH Linux</title>
+        <published>2026-05-19T00:00:00+00:00</published>
+        <updated>2026-05-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-sestup-bangal-on-arch-linux/"/>
+        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-sestup-bangal-on-arch-linux/</id>
+        
+        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-sestup-bangal-on-arch-linux/">&lt;h1 id=&quot;how-to-setup-bangla-and-ibus-for-switching-keyboard-layout-in-arch&quot;&gt;How to setup bangla and ibus for switching keyboard layout in arch&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;package-you-need&quot;&gt;Package you need&lt;&#x2F;h2&gt;
+&lt;p&gt;First of all you have to install ibus and two fonts family.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pacman&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -S&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ibus ttf-indic-otf harfbuzz&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then for avro you have install the avro with yay&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;yay&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -S&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ibus-avro&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Then just run &lt;code&gt;ibus-setup&lt;&#x2F;code&gt; and add avro in input method and you are good to go. You can switch between keyboard layout by pressing &lt;code&gt;super-space&lt;&#x2F;code&gt; or you can change it from the setting.&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;ibus-setup&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>WHY I SWITCH FROM EMACS AND EXWM</title>
         <published>2026-05-13T00:00:00+00:00</published>
