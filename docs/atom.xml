@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>THE SILENT ORCAS</title>
     <subtitle>Thoughts, tutorials, and insights on technology and cybersecurity</subtitle>
-    <link rel="self" type="application/atom+xml" href="https://nothing-r.github.io/FAKE-SYSTEM/atom.xml"/>
-    <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/"/>
+    <link rel="self" type="application/atom+xml" href="https://ridowannhacked.github.io/FAKE-SYSTEM/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
     <updated>2026-05-19T00:00:00+00:00</updated>
-    <id>https://nothing-r.github.io/FAKE-SYSTEM/atom.xml</id>
+    <id>https://ridowannhacked.github.io/FAKE-SYSTEM/atom.xml</id>
     <entry xml:lang="en">
         <title>How to sestUp bangal on ARCH Linux</title>
         <published>2026-05-19T00:00:00+00:00</published>
@@ -20,10 +20,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-sestup-bangal-on-arch-linux/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-sestup-bangal-on-arch-linux/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-sestup-bangal-on-arch-linux/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-sestup-bangal-on-arch-linux/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-sestup-bangal-on-arch-linux/">&lt;h1 id=&quot;how-to-setup-bangla-and-ibus-for-switching-keyboard-layout-in-arch&quot;&gt;How to setup bangla and ibus for switching keyboard layout in arch&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-sestup-bangal-on-arch-linux/">&lt;h1 id=&quot;how-to-setup-bangla-and-ibus-for-switching-keyboard-layout-in-arch&quot;&gt;How to setup bangla and ibus for switching keyboard layout in arch&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;package-you-need&quot;&gt;Package you need&lt;&#x2F;h2&gt;
 &lt;p&gt;First of all you have to install ibus and two fonts family.&lt;&#x2F;p&gt;
 &lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;sudo&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pacman&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -S&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; ibus ttf-indic-otf harfbuzz&lt;&#x2F;span&gt;&lt;span&gt; &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -46,10 +46,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/why-i-switch-from-emacs-and-exwm/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/why-i-switch-from-emacs-and-exwm/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/why-i-switch-from-emacs-and-exwm/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/why-i-switch-from-emacs-and-exwm/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/why-i-switch-from-emacs-and-exwm/">&lt;h1 id=&quot;why-i-switch&quot;&gt;Why I Switch&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/why-i-switch-from-emacs-and-exwm/">&lt;h1 id=&quot;why-i-switch&quot;&gt;Why I Switch&lt;&#x2F;h1&gt;
 &lt;p&gt;Ami j program tar upor prai 1 bocor er moto smy dilam jate ami proti ta line customize kore akta desktop envornment banalam oita k kno carlam!!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;first-reason-i-want-to-use-the-full-screen-of-my-system&quot;&gt;First reason (I want to use the full screen of my system)&lt;&#x2F;h2&gt;
 &lt;p&gt;Ami asole amr system er full screen ta use korte caitam sob smy e. J kno distraction thakbe na kiccu na. To ami jani na j jinis ta faltu lagbe ki na onno der kace. Kintu amr distraction free jinis besi valo lage j ami ja kortaci sudhu oita….akhn oneke bolbe j vai hudai ato smy nosto…apni to caile e fulscreen kore use korte parten. Ha partam….kintu ote akta smosssa hocce j extra keybind use kora lagto amr….j jinis ta ami caccilam na….r o EMACS ba EXWM er bottom echo area r doom line oita hide korte partecilam na poperly. Oita hoito fix kore feltam kintu tarpreo r o akta reason cilo oitar picone r oita e sob theke boro karon.&lt;&#x2F;p&gt;
@@ -73,10 +73,10 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/writeups/28-april-result-day/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/writeups/28-april-result-day/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/28-april-result-day/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/28-april-result-day/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/writeups/28-april-result-day/">&lt;h1 id=&quot;diploma-result-dilo-8th-semister-er&quot;&gt;DIPLOMA RESULT DILO 8TH SEMISTER ER&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/28-april-result-day/">&lt;h1 id=&quot;diploma-result-dilo-8th-semister-er&quot;&gt;DIPLOMA RESULT DILO 8TH SEMISTER ER&lt;&#x2F;h1&gt;
 &lt;p&gt;Ajk amr 4 bocor er electronics diploma er Result dilo. Mojar bepar hocce ami 7th semister a 6 ta subject er refurd exam dicilam sei 6 ta subject e abro refurd asce….mane hoyar kotha amon e cilo kintu ami vabcilam j hoito pass hobe 2 ta ba 1 ta te…kintu sob gula tei j fail hobe ayda vabi nai…ka k ki bolbo akhn? ammu k ki bolbo? ki ans debo sobai k…asole tkhn amr life ta khub kharap jaccilo mainly ami mentally khub depressed cilam sob dik dia…..tobuo ami try kortaci akhono sob kicu thik korar academic na kintu coading and programing er dik diye ami jani na j koto dur ki parbo…asole jani na ta na…main kotha hocce amr para e lagbe karon sob dike mara haile to hobe na….asole amr sei 1 bocor loss e holo j 1 bocor loss er jonno ami cse nicilam na….jak dekha jak nije koto dur jaite pari…amr kmn jeno sob gulai jacce hotat….ami bujhtaci na ki hoite jacce dekha jak&lt;&#x2F;p&gt;
 </content>
         
@@ -94,16 +94,16 @@
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/writeups/javascript-chaiorcode/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/writeups/javascript-chaiorcode/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/javascript-chaiorcode/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/javascript-chaiorcode/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/writeups/javascript-chaiorcode/">&lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/javascript-chaiorcode/">&lt;h1 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;&#x2F;h1&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nothing-r.github.io&#x2F;FAKE-SYSTEM&#x2F;writeups&#x2F;javascript-chaiorcode&#x2F;#var-let-and-const-video-04&quot;&gt;VAR LET AND CONST&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nothing-r.github.io&#x2F;FAKE-SYSTEM&#x2F;writeups&#x2F;javascript-chaiorcode&#x2F;#datatypes-and-ecma-video-05&quot;&gt;DataTypes and ECMA&lt;&#x2F;a&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ridowannhacked.github.io&#x2F;FAKE-SYSTEM&#x2F;writeups&#x2F;javascript-chaiorcode&#x2F;#var-let-and-const-video-04&quot;&gt;VAR LET AND CONST&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ridowannhacked.github.io&#x2F;FAKE-SYSTEM&#x2F;writeups&#x2F;javascript-chaiorcode&#x2F;#datatypes-and-ecma-video-05&quot;&gt;DataTypes and ECMA&lt;&#x2F;a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nothing-r.github.io&#x2F;FAKE-SYSTEM&#x2F;writeups&#x2F;javascript-chaiorcode&#x2F;#ecma&quot;&gt;ECMA&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nothing-r.github.io&#x2F;FAKE-SYSTEM&#x2F;writeups&#x2F;javascript-chaiorcode&#x2F;#datatypes&quot;&gt;DataTypes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ridowannhacked.github.io&#x2F;FAKE-SYSTEM&#x2F;writeups&#x2F;javascript-chaiorcode&#x2F;#ecma&quot;&gt;ECMA&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ridowannhacked.github.io&#x2F;FAKE-SYSTEM&#x2F;writeups&#x2F;javascript-chaiorcode&#x2F;#datatypes&quot;&gt;DataTypes&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -250,10 +250,10 @@ undefined mane hocce akta variable declear kore oita te kno value dea hoi ni…b
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/dwm-aswomebar-install/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/dwm-aswomebar-install/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/dwm-aswomebar-install/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/dwm-aswomebar-install/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/dwm-aswomebar-install/">&lt;h1 id=&quot;dwm-awesomebar-patch-setup-arch-linux&quot;&gt;DWM Awesomebar Patch Setup (Arch Linux)&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/dwm-aswomebar-install/">&lt;h1 id=&quot;dwm-awesomebar-patch-setup-arch-linux&quot;&gt;DWM Awesomebar Patch Setup (Arch Linux)&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;overview&quot;&gt;Overview&lt;&#x2F;h2&gt;
 &lt;p&gt;To use the Awesomebar patch in DWM on Arch Linux, we need to:&lt;&#x2F;p&gt;
 &lt;ol&gt;
@@ -385,10 +385,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/vscode-update/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/vscode-update/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/vscode-update/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/vscode-update/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/vscode-update/">&lt;h1 id=&quot;vs-code-a-ki-ki-update-korlam&quot;&gt;VS CODE A KI KI UPDATE KORLAM&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/vscode-update/">&lt;h1 id=&quot;vs-code-a-ki-ki-update-korlam&quot;&gt;VS CODE A KI KI UPDATE KORLAM&lt;&#x2F;h1&gt;
 &lt;p&gt;vs code a kicu smossa cilo last update er pore…vs code onk besi powerfull akta eidtor kintu amr moto public er smossa hocce keybinding. Ami keybinding cara system use korte pari na r vim motion cara file eidt korte pari na so amr khub baje akta obvab ayta ay jonno e amr vscode nia naracara kora lagce. R amr onk ta fix hoye gece bola jai 95%. Baki ja ja dorkar jdi hoi kore felbo insa’allah.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;notun-ki-ki-add-kora-hoice&quot;&gt;Notun ki ki add kora hoice&lt;&#x2F;h2&gt;
 &lt;p&gt;Ager config r keybindig gula te smossa cilo hocce terminal toggle kora jaito na neovim ba emacs er moto oita &lt;code&gt;ctrl+&#x2F;&lt;&#x2F;code&gt; a add kora hoice. R akta major problem cilo terminal tarpore command pallate kno jaiga te e space key ta kaj korto na oita k fix kora hoice notun kore j ta &lt;code&gt;keybindigs.json&lt;&#x2F;code&gt; file a add kor hoice.&lt;&#x2F;p&gt;
@@ -630,10 +630,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-install-mrrobot-and-metasploitable2-on-kali-virtmanager/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-install-mrrobot-and-metasploitable2-on-kali-virtmanager/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-install-mrrobot-and-metasploitable2-on-kali-virtmanager/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-install-mrrobot-and-metasploitable2-on-kali-virtmanager/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-install-mrrobot-and-metasploitable2-on-kali-virtmanager/">&lt;h1 id=&quot;metasploitable2&quot;&gt;METASPLOITABLE2&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-install-mrrobot-and-metasploitable2-on-kali-virtmanager/">&lt;h1 id=&quot;metasploitable2&quot;&gt;METASPLOITABLE2&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;import-file&quot;&gt;IMPORT FILE&lt;&#x2F;h2&gt;
 &lt;p&gt;Bohut kahini kora lagce amr jibon da tejpata hoye gece ay korte jeye ajk (07-02-2026) sara ta din. So metasploitable2 install er jonno first a unzip kore nite hobe main zip file ta. Er por j &lt;code&gt;vmdk&lt;&#x2F;code&gt; file ta paoya jabe oida re add korte hobe exixting file hisabe virtmanager a. Os type hisabe generic os 2022 selecet korte hobe.&lt;&#x2F;p&gt;
 &lt;img src=&quot;&#x2F;vm_installation&#x2F;os_type.png&quot; alt=&quot;IMAGE&quot; width=&quot;300&quot; height=&quot;220&quot;&gt;
@@ -662,10 +662,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/customizing-vs-code/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/customizing-vs-code/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/customizing-vs-code/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/customizing-vs-code/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/customizing-vs-code/">&lt;h1 id=&quot;neovim-vscode&quot;&gt;NEOVIM VSCODE&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/customizing-vs-code/">&lt;h1 id=&quot;neovim-vscode&quot;&gt;NEOVIM VSCODE&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;jj-for-normal-mode&quot;&gt;JJ FOR NORMAL MODE&lt;&#x2F;h2&gt;
 &lt;p&gt;ami neovim use kori karon keybindings. So amr sob theke usefull keybinding hocce &lt;code&gt;jj&lt;&#x2F;code&gt; j ta diye ami insert mode theke normal mode a switch kori. To ay same jinis ta vscode a apply korar jonno vs code er &lt;code&gt;Command Palatte&lt;&#x2F;code&gt; a jeye &lt;code&gt;settings.json&lt;&#x2F;code&gt; file ta open kore er pore ay snippet ta add korte hobe:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
@@ -786,10 +786,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/installing-bumblestatus/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/installing-bumblestatus/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/installing-bumblestatus/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/installing-bumblestatus/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/installing-bumblestatus/">&lt;h1 id=&quot;bumblestatus&quot;&gt;BUMBLESTATUS&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/installing-bumblestatus/">&lt;h1 id=&quot;bumblestatus&quot;&gt;BUMBLESTATUS&lt;&#x2F;h1&gt;
 &lt;p&gt;to kicu din age ami amr pc ta k khulna te rekhe asar por dia big screen a time waste kora ta miss kortacilam. To vablam j tyle hdmi diye laptop ta connect kore akam kori. Kinut exwm dia dual monitor alada vabe stup kora lagbe akhn ami ay jinis ta thik korte jeye dekhlam j amr config a permanently change kora lagbe r ami sob smy dual monitor use o kori na, that’s why ami i3 use kori jkhn dual monitor use kori. kintu kahini hocce &lt;code&gt;bumblestatus&lt;&#x2F;code&gt; niye j ta amr status bar onk age dia e i3wm a. Kintu ami hotat e oita install korte jeye pera kacchilam sob vabe install korar poreo kaj hoi nai. So last a jeye &lt;code&gt;gork&lt;&#x2F;code&gt; a jeye ami jiggasa kori j ki kore install korbo er pore o amk bollo j arch er aur theke manually git clone kore makepkg run korte r tarpore e kaj ta hoice. So ayta add kore rakhlam karon onk smy e amr bumblestatus use kora hoi na kintu jkhn dorkar pore ami vule jai j kmne ki korcilam. So command ta hocce ayta:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;git clone https:&#x2F;&#x2F;aur.archlinux.org&#x2F;yay.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
 &lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;cd yay&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
@@ -809,10 +809,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-enable-bluetooth-and-connect-it-to-devices/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-enable-bluetooth-and-connect-it-to-devices/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-enable-bluetooth-and-connect-it-to-devices/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-enable-bluetooth-and-connect-it-to-devices/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-enable-bluetooth-and-connect-it-to-devices/">&lt;h1 id=&quot;enabling-bluetooth-on-arch-linux-with-i3wm&quot;&gt;Enabling Bluetooth on Arch Linux with i3wm&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-enable-bluetooth-and-connect-it-to-devices/">&lt;h1 id=&quot;enabling-bluetooth-on-arch-linux-with-i3wm&quot;&gt;Enabling Bluetooth on Arch Linux with i3wm&lt;&#x2F;h1&gt;
 &lt;p&gt;This tutorial is based on the official Arch Wiki and common setups for a minimal i3wm environment.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;install-the-required-packages&quot;&gt;Install the required packages&lt;&#x2F;h2&gt;
 &lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;sudo pacman -S bluez bluez-utils&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -898,10 +898,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/blog/LINUX/why-fake-system/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/blog/LINUX/why-fake-system/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/blog/LINUX/why-fake-system/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/blog/LINUX/why-fake-system/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/blog/LINUX/why-fake-system/">&lt;h1 id=&quot;fake-system-dia-ki-hobe&quot;&gt;FAKE SYSTEM DIA KI HOBE?&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/blog/LINUX/why-fake-system/">&lt;h1 id=&quot;fake-system-dia-ki-hobe&quot;&gt;FAKE SYSTEM DIA KI HOBE?&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;hudai-ato-kahini-kno&quot;&gt;Hudai ato kahini kno?&lt;&#x2F;h2&gt;
 &lt;p&gt;Sobar mathai just akta question e asbe duniyai windows 10 &amp;amp; 11, linux er best distro Ubuntu, kali, Debian r ay gular graphical best option gnome, kde abong window manager hisabe most stable i3 r best animation abong feel soho asa hyperland bad diya kno manus hudai &lt;code&gt;emacs&lt;&#x2F;code&gt; er upor build hoya akta window manager &lt;code&gt;exwm&lt;&#x2F;code&gt; use korbe jar name dia rakha hoice &lt;code&gt;FAKE SYSTEM&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;p&gt;To akhn ami amr kotha boli. ami first laptop kini 2023 october a.  To amr cybersecurity er upor onk besi jhok cilo. Ami laptop er age e linux r kali somporke jancilam. To laptop ta kenar pore e vmware dia kali use kora suru kori. Tkhn ami partition file system os somporke kiccu jantam na. Kintu mojar bepar hocce ami windows onk kom use korci. Ami first use kori kali linux. Ami mone hoi laptop kenar 2 mas pore e kali main os hisabe dei. Ami tkhn partam na onno akjon er help nia kaj ta kori. Er pore kali usa kora suru kori kintu tkhn kali onk break hoito akhn er obostha jani na karon onno onk karone use e kora hoi na. So akta stable distro er jonno ghata-ghati suru kori. Pore ak ak kore ubuntu, parrot, linux mint, debian sob use korci kintu sotti bolte kno ta e moner moto cilo na. Ubuntu r parrot hudai frezee hoye jaito. Mint ta re bot bot lagto r debian to raw, linux experience na thakar jonno ami oita use korte pari nai….debian er dos na ami e bot cilam tkhn. To ami 2024 er mid er dike youtube a &lt;code&gt;hexdump&lt;&#x2F;code&gt; er video dekhi oi hala j ki use korce ami bujhi e nai. To oi system ta dekhe ami pura obak hoye jai j ay jinis to ami age dekhi nai. To ghataghati korte korte bujhlam j o &lt;code&gt;emacs&lt;&#x2F;code&gt; name a kicu akta use koratce r or oi setup dekhe amio caiclam j amio same vabe amr system use korbo. R ami caccilam akta lightweight setup karon laptop windows dia just calu korle e fan a gan gaoya suru kore dito. R onno distro gulateo onk ta same e bola jai. To hexdump er system ta cilo arch er upore. To ami first kno cybersecurity person k dekhlam j tar main os hisabe arch use kore. Ay jinis ta amk bes motivate kore r o mojar jinis hocce amr jehetu akta lightweight setup dorkar cilo j ta system upor kom pressure dibe to amio same jinis ta setup korar dicision nei. Amr life er sob theke baje othoba sob theke valo decision hobe hocce ayta. Akhn dekha jak  j ki hoi.&lt;&#x2F;p&gt;
@@ -923,10 +923,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/SYSTEM_ISSUE/system-update-of-november-2025/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/SYSTEM_ISSUE/system-update-of-november-2025/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/SYSTEM_ISSUE/system-update-of-november-2025/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/SYSTEM_ISSUE/system-update-of-november-2025/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/SYSTEM_ISSUE/system-update-of-november-2025/">&lt;h1 id=&quot;about-the-system&quot;&gt;About the system&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/SYSTEM_ISSUE/system-update-of-november-2025/">&lt;h1 id=&quot;about-the-system&quot;&gt;About the system&lt;&#x2F;h1&gt;
 &lt;p&gt;Ami majhe 2 din er jonno kali te switch korcilam🙂. To 2 din use korar pore ami amr main setup arch+exwm er sob kicu onk miss kortacilam. Asole amr ayta ovbas hoye gece arch ta k use kora ay jonno r ki…arch cara onno kicu use korte gele akhn uncomfortable feel hoi….r ami ay system er upore onk smy dici jinis gula k thik thak korar jonno…So it will always be ARCH THE FAKE SYSTEM.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;recent-issue&quot;&gt;Recent Issue&lt;&#x2F;h1&gt;
 &lt;p&gt;Majhe ami kicu din sob bad dicilam tkhno amr main system hisabe arch e dea cilo kintu ami prai 6 mas notun vabe setup korcilam na. To ami j script ta ready korcilam oita o check kora hoi nai. Kintu ami kicu din age jkhn amr arch setup korte jai amr script ta diye tkhn jhamela hoi amr script ta te kaj kortacilo na. Main issue cilo package gula te. &lt;code&gt;i3 dmenu nitrogen&lt;&#x2F;code&gt; ay package gula te problem er jonno kno package e install hoccilo na. Pore ami amr script diye ay package gula remove kore dei. Abong er por theke sob package gula thik thak e install hoice.&lt;&#x2F;p&gt;
@@ -950,10 +950,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/system-update-of-november-2025/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/system-update-of-november-2025/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/system-update-of-november-2025/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/system-update-of-november-2025/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/system-update-of-november-2025/">&lt;h1 id=&quot;about-the-system&quot;&gt;About the system&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/system-update-of-november-2025/">&lt;h1 id=&quot;about-the-system&quot;&gt;About the system&lt;&#x2F;h1&gt;
 &lt;p&gt;Ami majhe 2 din er jonno kali te switch korcilam🙂. To 2 din use korar pore ami amr main setup arch+exwm er sob kicu onk miss kortacilam. Asole amr ayta ovbas hoye gece arch ta k use kora ay jonno r ki…arch cara onno kicu use korte gele akhn uncomfortable feel hoi….r ami ay system er upore onk smy dici jinis gula k thik thak korar jonno…So it will always be ARCH THE FAKE SYSTEM.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;recent-issue&quot;&gt;Recent Issue&lt;&#x2F;h1&gt;
 &lt;p&gt;Majhe ami kicu din sob bad dicilam tkhno amr main system hisabe arch e dea cilo kintu ami prai 6 mas notun vabe setup korcilam na. To ami j script ta ready korcilam oita o check kora hoi nai. Kintu ami kicu din age jkhn amr arch setup korte jai amr script ta diye tkhn jhamela hoi amr script ta te kaj kortacilo na. Main issue cilo package gula te. &lt;code&gt;i3 dmenu nitrogen&lt;&#x2F;code&gt; ay package gula te problem er jonno kno package e install hoccilo na. Pore ami amr script diye ay package gula remove kore dei. Abong er por theke sob package gula thik thak e install hoice.&lt;&#x2F;p&gt;
@@ -977,10 +977,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/writeups/nitrogen-issue/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/writeups/nitrogen-issue/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/nitrogen-issue/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/nitrogen-issue/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/writeups/nitrogen-issue/">&lt;h1 id=&quot;ki-hoice&quot;&gt;KI HOICE&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/nitrogen-issue/">&lt;h1 id=&quot;ki-hoice&quot;&gt;KI HOICE&lt;&#x2F;h1&gt;
 &lt;p&gt;Ami onk din dhore e &lt;code&gt;nitrogen&lt;&#x2F;code&gt; use korteci amr wallpaper abong sddm r betterlockscreen er wallpaper manage korar jonno. Kintu recently ami kno vabe e nitrogen k download korte parteci na arch a so ami feh ta re select korci amr wallpaper manage korar jonno. Er jonno amr sddm abong betterlockscreen er bash script gula k update kora lagce ty jonno amr j ager script gula cilo oi gular backup rakhte cacci jate kore pore kno smossa hoile ami oita k abro fix korte pari&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;sddm-old-bash-script&quot;&gt;SDDM OLD BASH SCRIPT&lt;&#x2F;h2&gt;
 &lt;p&gt;ayta hocce amr old script ta:&lt;&#x2F;p&gt;
@@ -1037,10 +1037,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/writeups/about-2025/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/writeups/about-2025/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/about-2025/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/about-2025/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/writeups/about-2025/">&lt;h1 id=&quot;2025&quot;&gt;2025!!!&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups/about-2025/">&lt;h1 id=&quot;2025&quot;&gt;2025!!!&lt;&#x2F;h1&gt;
 &lt;p&gt;Amr 2025 ta onk ta onno rokom hoyar kotha cilo kintu ta hoi nai…ami amr sob theke besi effort dea project ta te loss kori march a….r oitar dhakka katiye uthte na uthte e khub marattok vabe osusto hoye pori…akta pokar kamore….kan er infection, buke betha sob kicu nia obostha purai ses hoye gecilo amr…..tarpore ENT er final exam ta o thik vabe dite pari nai….as a result amr 6 ta subject a fail asce….j gula ami akhono portaci…..akhn abr nijeke thik kore near try kortaci….dekha jak ki hoi amr sathe ses porjonto&lt;&#x2F;p&gt;
 </content>
         
@@ -1058,10 +1058,10 @@ patching file dwm.c&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-install-cisco-packet-tracer-in-arch/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-install-cisco-packet-tracer-in-arch/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-install-cisco-packet-tracer-in-arch/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-install-cisco-packet-tracer-in-arch/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-install-cisco-packet-tracer-in-arch/">&lt;h1 id=&quot;download&quot;&gt;Download&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-install-cisco-packet-tracer-in-arch/">&lt;h1 id=&quot;download&quot;&gt;Download&lt;&#x2F;h1&gt;
 &lt;p&gt;Cisco Packet Tracer donwload korar jonno first a &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.netacad.com&#x2F;&quot;&gt;NETCAD.COM&lt;&#x2F;a&gt; a jeye sign up korte hobe. Sign up korar pore &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.netacad.com&#x2F;resources&#x2F;lab-downloads?courseLang=en-US&quot;&gt;Download&lt;&#x2F;a&gt; link a click kore download korte hobe. Er pore arch aur theke packettracer ta clone korte hobe:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;git clone https:&#x2F;&#x2F;aur.archlinux.org&#x2F;packettracer.git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
 &lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;cd packettracer&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -1234,10 +1234,10 @@ After installation, check the license files:&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-configure-emacs/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-configure-emacs/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-configure-emacs/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-configure-emacs/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-configure-emacs/">&lt;h1 id=&quot;basic-of-emacs&quot;&gt;BASIC OF EMACS&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-configure-emacs/">&lt;h1 id=&quot;basic-of-emacs&quot;&gt;BASIC OF EMACS&lt;&#x2F;h1&gt;
 &lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;download.html&quot;&gt;Emacs&lt;&#x2F;a&gt; holo akta &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;&quot;&gt;gnu&lt;&#x2F;a&gt; software. Emacs mainly akta text editor. Kintu emacs sompurno ta e &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Emacs_Lisp&quot;&gt;emacs lisp&lt;&#x2F;a&gt; diye lekha to, emacs lisp diye sompurno emacs ta k e configure kora jai. Emacs ta k configure korar jonno emacs er basic concept gula bujhle e enough first a. Jdi r o besi valo kore bojha lage tkhn emacs lisp ta k valo vabe bojha lagbe o emacs lisp diye code kora sikhte hobe.&lt;&#x2F;p&gt;
 &lt;h1 id=&quot;basic-concept-of-emacs&quot;&gt;BASIC CONCEPT OF EMACS&lt;&#x2F;h1&gt;
 &lt;p&gt;Emacs er &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;manual&#x2F;html_node&#x2F;emacs&#x2F;Frames.html&quot;&gt;Frames&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;manual&#x2F;html_node&#x2F;emacs&#x2F;Buffers.html&quot;&gt;Buffers&lt;&#x2F;a&gt; , &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;manual&#x2F;html_node&#x2F;emacs&#x2F;Windows.html&quot;&gt;Window&lt;&#x2F;a&gt;  basic package install, repo adding r basic package customization ta sikhle e emacs use kora jabe abong coto kno issue hoile nije e fix kora somvob.&lt;&#x2F;p&gt;
@@ -2457,10 +2457,10 @@ After installation, check the license files:&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/blog/EMACS/how-to-install-and-configure-emacs/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/blog/EMACS/how-to-install-and-configure-emacs/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/blog/EMACS/how-to-install-and-configure-emacs/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/blog/EMACS/how-to-install-and-configure-emacs/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/blog/EMACS/how-to-install-and-configure-emacs/">&lt;h1 id=&quot;emacs-ki&quot;&gt;EMACS KI&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/blog/EMACS/how-to-install-and-configure-emacs/">&lt;h1 id=&quot;emacs-ki&quot;&gt;EMACS KI&lt;&#x2F;h1&gt;
 &lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;&quot;&gt;EMACS&lt;&#x2F;a&gt; akta open source gnu software. Ja ak sathe &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;emacs&#x2F;windows&#x2F;emacs-30&#x2F;emacs-30.1-installer.exe&quot;&gt;windows&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;download.html#gnu-linux&quot;&gt;linux&lt;&#x2F;a&gt; abong &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;f-droid.org&#x2F;repo&#x2F;com.termux_1022.apk&quot;&gt;android&lt;&#x2F;a&gt; a use kora jai. Emacs ami first dekhcilam &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@hexdump1337&quot;&gt;hexdump1337&lt;&#x2F;a&gt; er video te. To onar workflow dekhar pore r onar system use kora dekhe ami onk impressed hoi. R tkhn theke e emacs er upor agroho jonmai abong ami sekhar try kora suru kori. To ay prai 1 bocor er moto ghataghati korar pore ami amr personal emacs customize korci. Nijer moto kore nijer proyojon onujai. Ami ja ja sikhci sob e just nijer interest abong Internet theke. Youtube a emacs er jonno 2 jon k follow korci, onader tutorial dekhe e emacs customize korci abong emacs er basic jinis gula sikhci.&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=48JlgiBpw_I&amp;amp;list=PLEoMzSkcN8oPZvSdewHG8uApD7THlLLCV&quot;&gt;System Crafters&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2546,10 +2546,10 @@ After installation, check the license files:&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-install-and-configure-emacs/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-install-and-configure-emacs/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-install-and-configure-emacs/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-install-and-configure-emacs/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/how-to-install-and-configure-emacs/">&lt;h1 id=&quot;emacs-ki&quot;&gt;EMACS KI&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-install-and-configure-emacs/">&lt;h1 id=&quot;emacs-ki&quot;&gt;EMACS KI&lt;&#x2F;h1&gt;
 &lt;p&gt;&lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;&quot;&gt;EMACS&lt;&#x2F;a&gt; akta open source gnu software. Ja ak sathe &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;emacs&#x2F;windows&#x2F;emacs-30&#x2F;emacs-30.1-installer.exe&quot;&gt;windows&lt;&#x2F;a&gt;, &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.gnu.org&#x2F;software&#x2F;emacs&#x2F;download.html#gnu-linux&quot;&gt;linux&lt;&#x2F;a&gt; abong &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;f-droid.org&#x2F;repo&#x2F;com.termux_1022.apk&quot;&gt;android&lt;&#x2F;a&gt; a use kora jai. Emacs ami first dekhcilam &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@hexdump1337&quot;&gt;hexdump1337&lt;&#x2F;a&gt; er video te. To onar workflow dekhar pore r onar system use kora dekhe ami onk impressed hoi. R tkhn theke e emacs er upor agroho jonmai abong ami sekhar try kora suru kori. To ay prai 1 bocor er moto ghataghati korar pore ami amr personal emacs customize korci. Nijer moto kore nijer proyojon onujai. Ami ja ja sikhci sob e just nijer interest abong Internet theke. Youtube a emacs er jonno 2 jon k follow korci, onader tutorial dekhe e emacs customize korci abong emacs er basic jinis gula sikhci.&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=48JlgiBpw_I&amp;amp;list=PLEoMzSkcN8oPZvSdewHG8uApD7THlLLCV&quot;&gt;System Crafters&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
@@ -2635,10 +2635,10 @@ After installation, check the license files:&lt;&#x2F;p&gt;
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/system/what-i-use/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/system/what-i-use/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/what-i-use/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/what-i-use/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/system/what-i-use/">&lt;h1 id=&quot;a-short-story&quot;&gt;A SHORT STORY&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/what-i-use/">&lt;h1 id=&quot;a-short-story&quot;&gt;A SHORT STORY&lt;&#x2F;h1&gt;
 &lt;h2 id=&quot;de&quot;&gt;DE&lt;&#x2F;h2&gt;
 &lt;p&gt;Ami akjon youtuber k follow kori 2024 er last diye &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@hexdump1337&quot;&gt;hexdump1337&lt;&#x2F;a&gt;. Uni just akta software e mainly use kore sob kaj er jonno &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Emacs&quot;&gt;emacs&lt;&#x2F;a&gt;. From then I got interest into EMACS. And I always want to use my system like &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;leonardotamiano.xyz&#x2F;&quot;&gt;leonardotamiano&lt;&#x2F;a&gt;. Ami 2024 er middle er dik diya emacs niya ghataghati suru kori to amr first target cilo druto jinis gula sikhe kaj suru kore kintu amr sathe sob smy e kno jeno aktu ultapalta hoi to ami tkhn &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;doomemacs&#x2F;doomemacs&quot;&gt;DOOM EMACS&lt;&#x2F;a&gt; use korte pari nai amr system a kicu error ascilo to tarpore e amr emacs puro scratch theke build kora suru kora lagbe leo er moto akta config paoyar jnno. R emacs er tmn kno valo well documented resources ami youtube abong online a pai na ja dia ami shojei jinis gula sikhte parbo. To ami first a suru kori &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=74zOY-vgkyw&amp;amp;list=PLEoMzSkcN8oPH1au7H6B7bBJ4ZO7BXjSZ&quot;&gt;system crafters emacs from scratch&lt;&#x2F;a&gt; ay playlist ta diye. To onar video ta 4 bocor er moto purano to onk kicu e update hoice emacs er goto 4 bocor a. tobuo joto dur somvob ami oita dia e sekhar try korci abong basic jinis gula sikhci r jkhn ja nia confusion cilo oi ta ChatGpt diya valo vabe bujhe near try korci. To ami jehetu kicui jantam na r updated information khub e kom cilo r amr emacs-lisp er dharonao cilo na kno. to chatgpt er kach theke code niye jkhn emacs a ditam tkhn amon onk bar hoice j amr config abr scratch theke kora lagbe akta code er jonno. To er pore r akta updated youtube playlist pai oita hocce &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;@DistroTube&quot;&gt;DistroTube&lt;&#x2F;a&gt; Onaro akta emacs from scratch playlist ace &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=d1fgypEiQkE&amp;amp;list=PL5--8gKSku15e8lXf7aLICFmAHQVo0KXX&amp;amp;pp=0gcJCV8EOCosWNin&quot;&gt;EFS DISTRoTube&lt;&#x2F;a&gt;. ayta aktu updated to oita dekhe ami motamuti akta configuretion kore feli amr emacs er jonno. Kintu oi j Leonardotamiano, onar moto configuretion lagbe amr. To oi jinis gular jonno chatgpt abong online a onk ghataghati kora lagce amr jinis gula bojha lagce akta akta kore er pore jeye ami amr emacs ta banaite parci. To ayta akta long process cilo kintu ami happy akhn nijer moto kore nijer emacs ta configuretion korte parate. R motamoti akhn emacs a kno error asle oita bujhte pari abong solve korte pari r akbare notun kicu asle Chatgpt to ace e. So ayvabe e mainly amr system configuretion er suru. Ayta cilo hocce ami amr &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Desktop_environment&quot;&gt;DE&lt;&#x2F;a&gt; ta kivbe sajiyeci.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;main-os&quot;&gt;MAIN OS&lt;&#x2F;h2&gt;
@@ -2675,10 +2675,10 @@ Er pore ami window Manager sekhar kaj a laiga gelam. J aybar ayta sekha lagbe on
           </name>
         </author>
         
-        <link rel="alternate" type="text/html" href="https://nothing-r.github.io/FAKE-SYSTEM/whoami/whoami/"/>
-        <id>https://nothing-r.github.io/FAKE-SYSTEM/whoami/whoami/</id>
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/whoami/whoami/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/whoami/whoami/</id>
         
-        <content type="html" xml:base="https://nothing-r.github.io/FAKE-SYSTEM/whoami/whoami/">&lt;h1 id=&quot;whoami&quot;&gt;WHOAMI&lt;&#x2F;h1&gt;
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/whoami/whoami/">&lt;h1 id=&quot;whoami&quot;&gt;WHOAMI&lt;&#x2F;h1&gt;
 &lt;p&gt;That’s a question! Who am I. Acctually I am just a curious person who have a dream. A dream to be someone oneday! All of this are the step towards the goal.&lt;&#x2F;p&gt;
 &lt;p&gt;My Name is Ridowan. And I am just a curious learner who want to know about the digital world.&lt;&#x2F;p&gt;
 </content>

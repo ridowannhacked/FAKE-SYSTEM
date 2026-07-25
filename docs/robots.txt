@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://nothing-r.github.io/FAKE-SYSTEM/sitemap.xml
+Sitemap: https://ridowannhacked.github.io/FAKE-SYSTEM/sitemap.xml
