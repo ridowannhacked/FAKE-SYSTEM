@@ -1,5 +1,5 @@
 +++
-title = " 27 August Nothings Feel Good"
+title = "27 August Nothings Feel Good"
 date = "2026-08-27"
 author = ""
 +++
