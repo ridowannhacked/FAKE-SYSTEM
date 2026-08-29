@@ -29,7 +29,6 @@ external_links_no_referrer = true
 smart_punctuation = true
 
 [markdown.highlighting]
-enable = true
 theme = "dracula"   
 
 # Extra configuration for your site

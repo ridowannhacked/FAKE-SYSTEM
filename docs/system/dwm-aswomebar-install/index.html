@@ -38,7 +38,7 @@
                     <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups" class="">writeups</a>
 		    
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;NOTHING-R&#x2F;" target="_blank">GITHUB</a>
+                    <a href="https://github.com/NOTHING-R/" target="_blank">GITHUB</a>
                     
                 </div>
             </nav>
@@ -77,7 +77,7 @@
 <li>Inside the dwm source folder.</li>
 </ul>
 <h2 id="step-1-check-current-dwm-version">Step 1: Check current DWM version</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>cat config.mk | grep VERSION</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>cat config.mk | grep VERSION</span></span></code></pre>
 <ul>
 <li>
 <p>Expected output example:</p>
@@ -85,20 +85,20 @@
 </li>
 </ul>
 <h2 id="step-2-check-git-status">Step 2: Check Git status</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>git status</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>git status</span></span></code></pre>
 <ul>
 <li>Confirm you are in the dwm source folder.</li>
 <li>Clean up any untracked or compiled files if needed.</li>
 </ul>
 <h2 id="step-3-clean-the-repository">Step 3: Clean the repository</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>git reset --hard</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>git reset --hard</span></span>
 <span class="giallo-l"><span>git clean -fd</span></span></code></pre>
 <ul>
 <li>Removes all local changes, compiled objects, and untracked files.</li>
 <li>Output should show removal of files like `config.h`, `dwm`, `*.o`, patch files, etc.</li>
 </ul>
 <h2 id="step-4-confirm-version-after-cleanup">Step 4: Confirm version after cleanup</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>git describe --tags</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>git describe --tags</span></span></code></pre>
 <ul>
 <li>
 <p>Should output something like:</p>
@@ -106,7 +106,7 @@
 </li>
 </ul>
 <h2 id="step-5-switch-to-compatible-dwm-version-for-awesomebar-patch">Step 5: Switch to compatible DWM version for Awesomebar patch</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>git checkout 6.6</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>git checkout 6.6</span></span></code></pre>
 <ul>
 <li>
 <p>Now you are in a detached HEAD state at version 6.6, which matches the patch.</p>
@@ -117,12 +117,12 @@
 </li>
 </ul>
 <h2 id="step-6-download-the-awesomebar-patch">Step 6: Download the Awesomebar patch</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>curl -O https://dwm.suckless.org/patches/awesomebar/dwm-awesomebar-6.6.diff</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>curl -O https://dwm.suckless.org/patches/awesomebar/dwm-awesomebar-6.6.diff</span></span></code></pre>
 <ul>
 <li>This will download `dwm-awesomebar-6.6.diff` into your current folder.</li>
 </ul>
 <h2 id="step-7-apply-the-patch">Step 7: Apply the patch</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>patch -p1 &lt; dwm-awesomebar-6.6.diff</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>patch -p1 &lt; dwm-awesomebar-6.6.diff</span></span></code></pre>
 <ul>
 <li>
 <p>Expected output:</p>
@@ -136,18 +136,18 @@ patching file dwm.c</p>
 </li>
 </ul>
 <h2 id="step-8-create-config-h">Step 8: Create config.h</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>cp config.def.h config.h</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>cp config.def.h config.h</span></span></code></pre>
 <ul>
 <li>Ensures the new config includes the patched changes.</li>
 </ul>
 <h2 id="step-9-compile-and-install-dwm">Step 9: Compile and install DWM</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>sudo make clean install</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>sudo make clean install</span></span></code></pre>
 <ul>
 <li>Cleans old binaries, compiles patched DWM, and installs it to `/usr/local/bin/dwm`.</li>
 <li>Output should show compilation of `drw.c`, `dwm.c`, `util.c`, and copying `dwm` binary and man page.</li>
 </ul>
 <h2 id="step-10-run-dwm">Step 10: Run DWM</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>startx</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>startx</span></span></code></pre>
 <ul>
 <li>Or select DWM from your display manager (SDDM/LightDM/XDM).</li>
 <li>The Awesomebar should now appear and function.</li>

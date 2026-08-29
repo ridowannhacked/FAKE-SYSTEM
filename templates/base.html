@@ -29,10 +29,10 @@
                 </a>
                 <div class="nav-links">
 		  <!-- THIS IS FOR MAIN FOLDERS  -->
-                    <a href="{{ get_url(path="/blog/") }}" class="{% if current_path is starting_with("/blog/") %}active{% endif %}">BLOG</a>
-                    <a href="{{ get_url(path="/whoami/") }}" class="{% if current_path is starting_with("/whoami/") %}active{% endif %}">WHOAMI</a>
-                    <a href="{{ get_url(path="/system/") }}" class="{% if current_path is starting_with("/system/") %}active{% endif %}">SYSTEM</a>
-                    <a href="{{ get_url(path="/writeups/") }}" class="{% if current_path is starting_with("/writeups/") %}active{% endif %}">writeups</a>
+                    <a href="{{ get_url(path="/blog/") }}" class="{% if current_path and current_path is starting_with(pat="/blog/") %}active{% endif %}">BLOG</a>
+                    <a href="{{ get_url(path="/whoami/") }}" class="{% if current_path and current_path is starting_with(pat="/whoami/") %}active{% endif %}">WHOAMI</a>
+                    <a href="{{ get_url(path="/system/") }}" class="{% if current_path and current_path is starting_with(pat="/system/") %}active{% endif %}">SYSTEM</a>
+                    <a href="{{ get_url(path="/writeups/") }}" class="{% if current_path and current_path is starting_with(pat="/writeups/") %}active{% endif %}">writeups</a>
 		    
                     {% if config.extra.github_url %}
                     <a href="{{ config.extra.github_url }}" target="_blank">GITHUB</a>

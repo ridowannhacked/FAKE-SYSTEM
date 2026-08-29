@@ -38,7 +38,7 @@
                     <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups" class="">writeups</a>
 		    
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;NOTHING-R&#x2F;" target="_blank">GITHUB</a>
+                    <a href="https://github.com/NOTHING-R/" target="_blank">GITHUB</a>
                     
                 </div>
             </nav>
@@ -66,13 +66,13 @@
         <h1 id="enabling-bluetooth-on-arch-linux-with-i3wm">Enabling Bluetooth on Arch Linux with i3wm</h1>
 <p>This tutorial is based on the official Arch Wiki and common setups for a minimal i3wm environment.</p>
 <h2 id="install-the-required-packages">Install the required packages</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>sudo pacman -S bluez bluez-utils</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>sudo pacman -S bluez bluez-utils</span></span></code></pre>
 <ul>
 <li><code>bluez</code> provides the Bluetooth stack.</li>
 <li><code>bluez-utils</code> includes <code>bluetoothctl</code> for management.</li>
 </ul>
 <h2 id="enable-and-start-the-bluetooth-service">Enable and start the Bluetooth service</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>sudo systemctl enable --now bluetooth.service</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>sudo systemctl enable --now bluetooth.service</span></span></code></pre>
 <ul>
 <li>
 <p>This starts the service now and enables it on boot.</p>
@@ -83,13 +83,13 @@
 </li>
 </ul>
 <h2 id="unblock-bluetooth-if-blocked-by-rfkill">Unblock Bluetooth (if blocked by rfkill)</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>rfkill list</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>rfkill list</span></span></code></pre>
 <p>If Bluetooth is soft-blocked:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>rfkill unblock bluetooth</span></span></code></pre><h2 id="basic-management-via-cli-using-bluetoothctl">Basic management via CLI (using bluetoothctl)</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>rfkill unblock bluetooth</span></span></code></pre><h2 id="basic-management-via-cli-using-bluetoothctl">Basic management via CLI (using bluetoothctl)</h2>
 <p>Run:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>bluetoothctl</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>bluetoothctl</span></span></code></pre>
 <p>Inside the interactive prompt:</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>power on          # Turn Bluetooth on</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>power on          # Turn Bluetooth on</span></span>
 <span class="giallo-l"><span>scan on           # Scan for devices (discoverable mode on your device)</span></span>
 <span class="giallo-l"><span>pair XX:XX:XX:XX:XX:XX   # Pair with device&#39;s MAC (shown in scan)</span></span>
 <span class="giallo-l"><span>trust XX:XX:XX:XX:XX:XX  # Optional: auto-connect in future</span></span>
@@ -98,7 +98,7 @@
 <p>This works perfectly in a terminal with i3wm—no GUI needed.</p>
 <h2 id="recommended-gui-manager-for-i3wm-tray-applet">Recommended GUI manager for i3wm (tray applet)</h2>
 <p>i3wm doesn’t have a built-in Bluetooth tray, so install <strong><strong>Blueman</strong></strong> (lightweight GTK-based manager with a system tray applet):</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>sudo pacman -S blueman</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>sudo pacman -S blueman</span></span></code></pre>
 <ul>
 <li>
 <p>Start the tray applet:</p>
@@ -117,7 +117,7 @@
 </ul>
 <p>A tray icon will appear (assuming you have a status bar like i3status/polybar that supports trays). Right-click it to manage devices, or run <code>blueman-manager</code> for the full GUI.</p>
 <h3 id="alternative-lightweight-option-blueberry">Alternative lightweight option: Blueberry</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>sudo pacman -S blueberry</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>sudo pacman -S blueberry</span></span></code></pre>
 <p>Run <code>blueberry</code> for the manager (no persistent tray).</p>
 <h2 id="troubleshooting-tips">Troubleshooting tips</h2>
 <ul>

@@ -38,7 +38,7 @@
                     <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups" class="">writeups</a>
 		    
                     
-                    <a href="https:&#x2F;&#x2F;github.com&#x2F;NOTHING-R&#x2F;" target="_blank">GITHUB</a>
+                    <a href="https://github.com/NOTHING-R/" target="_blank">GITHUB</a>
                     
                 </div>
             </nav>
@@ -88,26 +88,26 @@
 <p>Emacs er sob theke valo akta feature hocce <code>org mode</code>. Org mode er onk feature ace. Abong emacs use korle org mode file theke onno mode jemon markdown ba html a convert korao onk easy hoi. To nijer config file lekahr jonno org file use kora best.</p>
 <h2 id="directory-structure">Directory Structure</h2>
 <p>First a amader .config/emacs/ directory ta banaite hobe abong amader system a kno .emacs.d directory thakle oita k delete kore dite hobe. R directory er vitore 3 ta file create korte hobe init.el, early-init.el abong config.org.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>rm -rf ~/.emacs.d</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>rm -rf ~/.emacs.d</span></span>
 <span class="giallo-l"><span>mkdir -p ~/.config/emacs</span></span>
 <span class="giallo-l"><span>touch -p ~/.config/emacs/init.el</span></span>
 <span class="giallo-l"><span>touch -p ~/.config/emacs/early-init.el</span></span>
 <span class="giallo-l"><span>touch -p ~/.config/emacs/config.org</span></span></code></pre><h2 id="init-el">INIT.EL</h2>
 <p>First a amader .config/emacs/init.el file ta edit korte hobe:-</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>vim .config/emacs/init.el</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>vim .config/emacs/init.el</span></span></code></pre>
 <p>Abong er pore file ta te ay line gulo add korte hobe. Ay line gulo init.el file k bole j amra amader config file hisabe config.org file ta use korbo</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(org-babel-load-file</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(org-babel-load-file</span></span>
 <span class="giallo-l"><span> (expand-file-name</span></span>
 <span class="giallo-l"><span>  &quot;config.org&quot;</span></span>
 <span class="giallo-l"><span>  user-emacs-directory))</span></span></code></pre><h2 id="early-init-el">EARLY-INIT.EL</h2>
 <p>Amra jkhn amader repo hisabe <a rel="noopener nofollow noreferrer external" target="_blank" href="https://github.com/progfolio/elpaca">elpaca</a> use kori tkhn amader r o extra akta file add kora lage amader emacs folder a early-init.el ja elpaca er repo teo lekha ace.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>vim ~/.config/emacs/early-init.el</span></span></code></pre>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>vim ~/.config/emacs/early-init.el</span></span></code></pre>
 <p>File ta te ay line ta add kore dite hobe:-</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(setq package-enable-at-startup nil)</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(setq package-enable-at-startup nil)</span></span>
 <span class="giallo-l"><span>;; (add-to-list &#39;default-frame-alist &#39;(font . &quot;JetBrains Mono-11&quot;))</span></span></code></pre><h2 id="config-org">CONFIG.ORG</h2>
 <p>Aybar amra amader Emacs ta k configure kora suru korbo. Configuretion er jonno sobar e alada alada approch ace. Ami first a repo gulo setup kori. Elpaca er repo theke elpaca er code ta ane just ay jagai paste kore dile e elpaca setup hoye jabe.</p>
 <h3 id="elpaca">ELPACA</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(defvar elpaca-installer-version 0.11)</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(defvar elpaca-installer-version 0.11)</span></span>
 <span class="giallo-l"><span>(defvar elpaca-directory (expand-file-name &quot;elpaca/&quot; user-emacs-directory))</span></span>
 <span class="giallo-l"><span>(defvar elpaca-builds-directory (expand-file-name &quot;builds/&quot; elpaca-directory))</span></span>
 <span class="giallo-l"><span>(defvar elpaca-repos-directory (expand-file-name &quot;repos/&quot; elpaca-directory))</span></span>
@@ -146,19 +146,19 @@
 <span class="giallo-l"><span>(add-hook &#39;after-init-hook #&#39;elpaca-process-queues)</span></span>
 <span class="giallo-l"><span>(elpaca `(,@elpaca-order))</span></span></code></pre><h3 id="setting-up-use-package-support">SETTING UP “use-package” support</h3>
 <p>Package install korar jonno nijer code tuku add korte hobe. Ayta elcapa er main code er ses a add kore dite hobe.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; Install use-package support</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; Install use-package support</span></span>
 <span class="giallo-l"><span>(elpaca elpaca-use-package</span></span>
 <span class="giallo-l"><span>  ;; Enable use-package :ensure support for Elpaca.</span></span>
 <span class="giallo-l"><span>  (elpaca-use-package-mode))</span></span></code></pre><h3 id="some-repo">SOME REPO</h3>
 <p>R o 3 ta repo add korte hobe, ay gula kicu package er jonno proyojon ja amra elpaca te pabo na.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(require &#39;package)</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(require &#39;package)</span></span>
 <span class="giallo-l"><span>(setq package-archives</span></span>
 <span class="giallo-l"><span>      &#39;((&quot;gnu&quot; . &quot;https://elpa.gnu.org/packages/&quot;)</span></span>
 <span class="giallo-l"><span>        (&quot;melpa&quot; . &quot;https://melpa.org/packages/&quot;)</span></span>
 <span class="giallo-l"><span>        (&quot;org&quot; . &quot;https://orgmode.org/elpa/&quot;)))</span></span>
 <span class="giallo-l"><span>(package-initialize)</span></span></code></pre><h3 id="doom-modelime-and-doom-theme">DOOM MODELIME AND DOOM THEME</h3>
 <p>Emacs er defult theme r modeline ta change korar jonno amra doom modeline abong theme install korbo. Jate kore amra thik vabe emacs a kaj korte pari. Mainly cokher santi er jonno😌.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package doom-modeline</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package doom-modeline</span></span>
 <span class="giallo-l"><span>  :ensure t</span></span>
 <span class="giallo-l"><span>  :config</span></span>
 <span class="giallo-l"><span>  (doom-modeline-mode 1))</span></span>
@@ -177,7 +177,7 @@
 <span class="giallo-l"><span>(load-theme &#39;doom-one t))</span></span></code></pre><h3 id="fonts">FONTS</h3>
 <p>Emacs er fonts change korar jonno font add korte hobe.</p>
 <p>If you are having trouble of loading the fonts please add those line in your early-init.el file</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(add-to-list &#39;default-frame-alist &#39;(font . &quot;JetBrains Mono-11&quot;))</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(add-to-list &#39;default-frame-alist &#39;(font . &quot;JetBrains Mono-11&quot;))</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>(set-face-attribute &#39;default nil :font &quot;JetBrains Mono&quot; :height 160 :weight &#39;medium)</span></span>
 <span class="giallo-l"><span>;; (set-face-attribute &#39;variable-pitch nil :font &quot;Ubuntu&quot; :height 120 :weight &#39;medium)</span></span>
@@ -189,7 +189,7 @@
 <ul>
 <li>
 <p>ORG MAIN</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package toc-org</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package toc-org</span></span>
 <span class="giallo-l"><span>  :ensure t</span></span>
 <span class="giallo-l"><span>  :commands toc-org-enable</span></span>
 <span class="giallo-l"><span>  :init (add-hook &#39;org-mode-hook &#39;toc-org-enable))</span></span>
@@ -202,7 +202,7 @@
 <span class="giallo-l"><span>(require &#39;org-tempo)</span></span></code></pre></li>
 <li>
 <p>ORG MODE GRAphical TWeaks</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(setq org-edit-src-content-indentation 0) ;; set src block automatic indent to 0 instead of 2.</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(setq org-edit-src-content-indentation 0) ;; set src block automatic indent to 0 instead of 2.</span></span>
 <span class="giallo-l"><span>(delete-selection-mode 1)    ;; you can select text and delete it by typing.</span></span>
 <span class="giallo-l"><span>(electric-indent-mode -1)    ;; turn off the weird indenting that emacs does by default.</span></span></code></pre></li>
 </ul>
@@ -211,28 +211,28 @@
 <li>
 <p>DEFAULT BIP SOUND DISABLE</p>
 <p>Emacs a defult vabe akta beep sound kore jdi kno line er first a jeye backspace click kora hoi ba kno vhul command dea hoi j ta sunte onk besi osojjo lage ay jonno defult beep sound ta off kora dorkar.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package emacs</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package emacs</span></span>
 <span class="giallo-l"><span>  :ensure nil</span></span>
 <span class="giallo-l"><span>  :config</span></span>
 <span class="giallo-l"><span>  (setq ring-bell-function #&#39;ignore))</span></span></code></pre></li>
 <li>
 <p>Disable Menubar, Toolbars and Scrollbars</p>
 <p>Minimul look er jonno menu-bar, scroll-bar abong tool-bar off kore dea.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(menu-bar-mode -1)           ;; Disable the menu bar </span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(menu-bar-mode -1)           ;; Disable the menu bar </span></span>
 <span class="giallo-l"><span>(scroll-bar-mode -1)         ;; disable the scroll bar</span></span>
 <span class="giallo-l"><span>(tool-bar-mode -1)           ;; Disable the tool bar</span></span></code></pre></li>
 <li>
 <p>Display Line Numbers and Truncated Lines</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(global-auto-revert-mode t)  ;; Automatically show changes if the file has changed</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(global-auto-revert-mode t)  ;; Automatically show changes if the file has changed</span></span>
 <span class="giallo-l"><span>(global-visual-line-mode t)  ;; Enable truncated lines</span></span></code></pre></li>
 <li>
 <p>DISPLAY LINE NUMBER MODE</p>
 <p>Line number gula show korar jonno ay mode gula on korte hobe</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(global-display-line-numbers-mode 1) ;; Display line numbers</span></span></code></pre></li>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(global-display-line-numbers-mode 1) ;; Display line numbers</span></span></code></pre></li>
 <li>
 <p>FOR PAIR MODE: LIKE(){}</p>
 <p>Coding korar smy pair mode mane single parenthesis ba bracket dile onno akta autmetically add hoye jai…ay support er jonno pair mode use kora hoi. Abr org mode er shortcut gula &lt;s ba &lt;e ayvabe kaj kore to “&lt;” aytar jonno pair mode ta off rakhte hobe na hoile org file edit korte jhamela hobe ay jonno e pair mode er config ta amon vabe kora.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(electric-pair-mode 1)       ;; Turns on automatic parens pairing</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(electric-pair-mode 1)       ;; Turns on automatic parens pairing</span></span>
 <span class="giallo-l"><span>;; The following prevents &lt;&gt; from auto-pairing when electric-pair-mode is on.</span></span>
 <span class="giallo-l"><span>;; Otherwise, org-tempo is broken when you try to &lt;s TAB...</span></span>
 <span class="giallo-l"><span>(add-hook &#39;org-mode-hook (lambda ()</span></span>
@@ -241,7 +241,7 @@
 <span class="giallo-l"><span>                      (if (char-equal c ?&lt;) t (,electric-pair-inhibit-predicate c))))))</span></span></code></pre></li>
 <li>
 <p>ZOOMING IN AND OUT</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;;========= ZOOMING IN AND OUT ==========</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;;========= ZOOMING IN AND OUT ==========</span></span>
 <span class="giallo-l"><span>(global-set-key (kbd &quot;C-=&quot;) &#39;text-scale-increase)</span></span>
 <span class="giallo-l"><span>(global-set-key (kbd &quot;C--&quot;) &#39;text-scale-decrease)</span></span>
 <span class="giallo-l"><span>(global-set-key (kbd &quot;&lt;C-wheel-up&gt;&quot;) &#39;text-scale-increase)</span></span>
@@ -252,9 +252,9 @@
 </ul>
 <h3 id="minibuffer-escape">MINIBUFFER ESCAPE</h3>
 <p>jkhn minibuffer a focus jai tkhn minibuffer theke focus sorarnor jonno jhamela hoi onk bar esc press kora lage to ay problem ta solve korar jonno, one click a minibuffer theke escape korar jonno.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(global-set-key [escape] &#39;keyboard-escape-quit);;MInibuffer escape</span></span></code></pre><h3 id="evil-mode">EVIL MODE</h3>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(global-set-key [escape] &#39;keyboard-escape-quit);;MInibuffer escape</span></span></code></pre><h3 id="evil-mode">EVIL MODE</h3>
 <p>Vim like keybinding er jonno Evil Mode.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package evil</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package evil</span></span>
 <span class="giallo-l"><span>  :ensure t</span></span>
 <span class="giallo-l"><span>  :init</span></span>
 <span class="giallo-l"><span>  (setq evil-want-integration t)</span></span>
@@ -281,13 +281,13 @@
 <span class="giallo-l"><span>;; Setting RETURN key in org-mode to follow links</span></span>
 <span class="giallo-l"><span>(setq org-return-follows-link  t)</span></span></code></pre><h3 id="vterm">VTERM</h3>
 <p>Emacs er jonno best terminal emulator vterm setup korar jonno.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package vterm</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package vterm</span></span>
 <span class="giallo-l"><span>  :ensure t)</span></span>
 <span class="giallo-l"><span>(add-hook &#39;vterm-mode-hook (lambda () (display-line-numbers-mode -1)))</span></span></code></pre><h3 id="counsel-and-ivy">COUNSEL AND IVY</h3>
 <p>Ivy → Emacs-এর ডিফল্ট completion সিস্টেমকে replace করে, যাতে command, file, buffer ইত্যাদি search ও select করা অনেক fast আর smart হয়।</p>
 <p>Counsel → Ivy-এর extension, যা default Emacs command (যেমন M-x, find-file) গুলোকে extra feature দিয়ে আরও powerful করে।</p>
 <p>Short summary: Ivy completion system সামলায়, Counsel command গুলো upgrade করে — একসাথে Emacs-কে অনেক বেশি smooth আর feature-rich বানায়।</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package counsel</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package counsel</span></span>
 <span class="giallo-l"><span>  :ensure t</span></span>
 <span class="giallo-l"><span>  :after ivy</span></span>
 <span class="giallo-l"><span>  :config (counsel-mode))</span></span>
@@ -321,7 +321,7 @@
 <span class="giallo-l"><span>  (ivy-set-display-transformer &#39;ivy-switch-buffer</span></span>
 <span class="giallo-l"><span>                               &#39;ivy-rich-switch-buffer-transformer))</span></span></code></pre><h3 id="general-keybinding">GENERAL KEYBINDING</h3>
 <p>Doom emacs a jmn SPC diye keybindings gulo kaj kore same keybindings gulo add korar jonno general package ta add kore ayta k customize korci. abong ay customization ta distro tube er emacs config theke nea ay jonno e dt/leader key dea sob jaiga te.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package general</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package general</span></span>
 <span class="giallo-l"><span>  :ensure t</span></span>
 <span class="giallo-l"><span>  :config</span></span>
 <span class="giallo-l"></span>
@@ -525,14 +525,14 @@
 <span class="giallo-l"><span>    &quot;w L&quot; &#39;(buf-move-right :wk &quot;Buffer move right&quot;))</span></span>
 <span class="giallo-l"><span>  )</span></span></code></pre><h3 id="sudo-edit">SUDO EDIT</h3>
 <p>Majhe majhe emacs diye amon kicu file edit korte hoi j gula sudo permission cai. kintu emacs defult vabe ay jinis ta support kore na ay jonno sudo permission diye file edit korar jonno amader ay package ta lagbe.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package sudo-edit</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package sudo-edit</span></span>
 <span class="giallo-l"><span>  :ensure t</span></span>
 <span class="giallo-l"><span>  :config</span></span>
 <span class="giallo-l"><span>    (dt/leader-keys</span></span>
 <span class="giallo-l"><span>      &quot;fu&quot; &#39;(sudo-edit-find-file :wk &quot;Sudo find file&quot;)</span></span>
 <span class="giallo-l"><span>      &quot;fU&quot; &#39;(sudo-edit :wk &quot;Sudo edit file&quot;)))</span></span></code></pre><h3 id="emacs-keybinding">EMACS KEYBINDING</h3>
 <p>Ay gula amr nijer keybinding J gula Alt diye kaj kore. R tmi nije caileo nijer moto kore nijer keybinding add kore nite paro.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; Bookmarks and Buffers keybindings</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; Bookmarks and Buffers keybindings</span></span>
 <span class="giallo-l"><span>(define-key global-map (kbd &quot;M-b&quot;) nil)  ;; Start defining a prefix for M-b</span></span>
 <span class="giallo-l"><span>;;(define-key global-map (kbd &quot;M-b b&quot;) &#39;switch-to-buffer)</span></span>
 <span class="giallo-l"><span>(define-key global-map (kbd &quot;M-b i&quot;) &#39;exwm-workspace-switch-to-buffer) ;; Uncomment if needed</span></span>
@@ -593,7 +593,7 @@
 <span class="giallo-l"><span>(define-key global-map (kbd &quot;M-m L&quot;) #&#39;Update-lockscreen-bg)</span></span>
 <span class="giallo-l"><span>(define-key global-map (kbd &quot;M-m s&quot;) #&#39;Update-sddm-wallpaper)</span></span></code></pre><h3 id="which-key">WHICH KEY</h3>
 <p>Which key emacs er akta package j package ta keybinding gula show kore abong kon keybinding er kaj ki oita minibuffer a show kore. Jemon just spc press korle minibuffer a sob keybinding gula show korbe.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package which-key</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package which-key</span></span>
 <span class="giallo-l"><span>:ensure t</span></span>
 <span class="giallo-l"><span>:init</span></span>
 <span class="giallo-l"><span>  (which-key-mode 1)</span></span>
@@ -611,7 +611,7 @@
 <span class="giallo-l"><span>        which-key-allow-imprecise-window-fit nil</span></span>
 <span class="giallo-l"><span>        which-key-separator &quot; → &quot; ))</span></span></code></pre><h3 id="blank-buffer">BLANK BUFFER</h3>
 <p>Blank Buffer ayta asole amr nijer add kora jate kore amon akta buffer create kore j buffer a kno kicu e thakbe na ay buffer ta create korar karon holo jate kore exwm a amra amader wallpaper ta dekhte pari. Na hoile amr asole full akta window manager er vibe ase na.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; create a completely blank buffer</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; create a completely blank buffer</span></span>
 <span class="giallo-l"><span>(defun my/blank-buffer ()</span></span>
 <span class="giallo-l"><span>  &quot;create a new completely blank buffer with no ui elements.&quot;</span></span>
 <span class="giallo-l"><span>  (interactive)</span></span>
@@ -630,7 +630,7 @@
 <span class="giallo-l"><span>    ;; Clear message area</span></span>
 <span class="giallo-l"><span>    (message nil)))</span></span></code></pre><h3 id="transperency">TRANSPERENCY</h3>
 <p>Transparency er setting gula mainly background show korar jonno.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; START picom for transparency</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; START picom for transparency</span></span>
 <span class="giallo-l"><span>(start-process &quot;picom&quot; nil &quot;picom&quot;)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>;;; TRANSPARENCY LOGIC BASED ON BUFFER NAME</span></span>
@@ -649,7 +649,7 @@
 <span class="giallo-l"><span>;; Update transparency whenever buffer changes</span></span>
 <span class="giallo-l"><span>(add-hook &#39;buffer-list-update-hook #&#39;my/update-transparency-based-on-buffer)</span></span></code></pre><h3 id="mouse-battery-and-background-setup">MOUSE, BATTERY AND BACKGROUND SETUP</h3>
 <p>Sob window manger er bar gula te jemon, polybar ba i3bar a kicu information show kore abong kno software run hoile tar applet ta show kore. To same jinis tar jonno e ay config gula. nm-applet j ta linux er network maintain korar jonno help kore oita abong ami screenshoot er jonno flameshot use kori ay dui ta k emacs er modeline a show korar jonno ami ay config gula use kori.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(setq mouse-autoselect-window t</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(setq mouse-autoselect-window t</span></span>
 <span class="giallo-l"><span>      focus-follows-mouse t)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>(display-time-mode 1)</span></span>
@@ -665,7 +665,7 @@
 <span class="giallo-l"><span>            (run-at-time &quot;3 sec&quot; nil (lambda ()</span></span>
 <span class="giallo-l"><span>              (start-process &quot;flameshot&quot; nil &quot;flameshot&quot;)))))</span></span></code></pre><h3 id="ide">IDE</h3>
 <p>Amr issa ace j ami emacs k e amr main coding IDE hisabe use korbo to emacs diye coding korar jonno ja ja proyojon oi hisabe akta ide build korar try kortaci.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; ========== Neotree Mode ==========</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; ========== Neotree Mode ==========</span></span>
 <span class="giallo-l"><span>(use-package neotree</span></span>
 <span class="giallo-l"><span>  :ensure t)</span></span>
 <span class="giallo-l"><span>;; ========== Company Mode ==========</span></span>
@@ -708,7 +708,7 @@
 <ul>
 <li>
 <p>PYTHON</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package python-mode</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package python-mode</span></span>
 <span class="giallo-l"><span>  :hook (python-mode . lsp)</span></span>
 <span class="giallo-l"><span>  :custom</span></span>
 <span class="giallo-l"><span>  (python-shell-interpreter &quot;python3&quot;))</span></span>
@@ -721,7 +721,7 @@
 <span class="giallo-l"><span>                         (lsp))))</span></span></code></pre></li>
 <li>
 <p>DART MODE</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; Dart + Flutter setup</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; Dart + Flutter setup</span></span>
 <span class="giallo-l"><span>(use-package dart-mode</span></span>
 <span class="giallo-l"><span>  :ensure t</span></span>
 <span class="giallo-l"><span>  :hook (dart-mode . lsp)</span></span>
@@ -746,7 +746,7 @@
 </ul>
 <h3 id="dashboard">DASHBOARD</h3>
 <p>Dashboard hocce akta emacs package j ta recent file abong onno kicu important option show kore. jdi kew exwm use na kore just emacs use kore tar jonno ay package ta startup page hisabe onk valo kaj korbe.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package dashboard</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package dashboard</span></span>
 <span class="giallo-l"><span>  :ensure t</span></span>
 <span class="giallo-l"><span>  :init</span></span>
 <span class="giallo-l"><span>  ;; (setq initial-buffer-choice &#39;dashboard-open)</span></span>
@@ -767,7 +767,7 @@
 <span class="giallo-l"><span>;; :config</span></span>
 <span class="giallo-l"><span>;; (dashboard-setup-startup-hook))</span></span></code></pre><h3 id="dired">DIRED</h3>
 <p>Emacs er defult file manger <code>DIRED</code> er fiture increase korar jonno configuretion.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(use-package dired-open</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(use-package dired-open</span></span>
 <span class="giallo-l"><span>  :ensure t</span></span>
 <span class="giallo-l"><span>  :config</span></span>
 <span class="giallo-l"><span>  (setq dired-open-extensions &#39;((&quot;gif&quot; . &quot;loupe&quot;)</span></span>
@@ -791,9 +791,9 @@
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>(setq dired-listing-switches &quot;-lha&quot;)</span></span></code></pre><h3 id="backups">BACKUPS</h3>
 <p>Emacs j backup file gula toiri kore oi gula k autmetically trash folder a move kore dea. ami ay config ta o dt er theke copy korci to ayta akhn koto ta kaj kore ami sure na..future a er upgraded version nia asbo insa’allah.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(setq backup-directory-alist &#39;((&quot;.*&quot; . &quot;~/.local/share/Trash/files&quot;)))</span></span></code></pre><h3 id="buffer-move">BUFFER MOVE</h3>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(setq backup-directory-alist &#39;((&quot;.*&quot; . &quot;~/.local/share/Trash/files&quot;)))</span></span></code></pre><h3 id="buffer-move">BUFFER MOVE</h3>
 <p>Buffer gula same workspace er vitore window to window move korar jonno ay code tuku jmn jdi akta workspace a 2 ta window thake abong akta te right side a firefox o left side a thunar, to thunar abong firefox k move korarnor jonno ay code tuku proyojon. Aytao dt er config er copy.😜</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(require &#39;windmove)</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(require &#39;windmove)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>;;;###autoload</span></span>
 <span class="giallo-l"><span>(defun buf-move-up ()</span></span>
@@ -867,7 +867,7 @@
 <li>
 <p>exwm main</p>
 <p><a rel="noopener nofollow noreferrer external" target="_blank" href="https://github.com/emacs-exwm/exwm/wiki">EXWM WIKI</a> dekhle exwm kivabe setup korte hobe sob bujhte parba. Ami amr config a nijer moto kore kicu changes korci. Exwm a defult vabe leader key hisabe Windows ba Super key dea thake, kintu amr personally Alt key ta besi posondo. Amr personal preference hocce j keyboard a 2 ta Alt key thake to to control korte subidha hoi.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(require &#39;exwm)</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(require &#39;exwm)</span></span>
 <span class="giallo-l"><span>;; Set the initial workspace number.</span></span>
 <span class="giallo-l"><span>(setq exwm-workspace-number 10)</span></span>
 <span class="giallo-l"><span>;;/ Make class name the buffer name.</span></span>
@@ -910,7 +910,7 @@
 <span class="giallo-l"><span>(exwm-randr-mode 1)</span></span></code></pre></li>
 </ul>
 <h3 id="exwm-display">EXWM DISPLAY</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(setq X11_SCREEN_LIST &#39;(&quot;eDP-1&quot; &quot;DP-3&quot;))</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(setq X11_SCREEN_LIST &#39;(&quot;eDP-1&quot; &quot;DP-3&quot;))</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>;; xrandr --mode for each screen in X11_SCREEN_LIST</span></span>
 <span class="giallo-l"><span>(setq X11_SCREEN_MODE_LIST &#39;(&quot;1680x1050&quot; &quot;3840x1600&quot;))</span></span>
@@ -946,7 +946,7 @@
 <span class="giallo-l"><span>(setq EXWM_WORKSPACE_LIST &#39;((1 . &quot;eDP-1&quot;) (3 . &quot;eDP-1&quot;)))</span></span>
 <span class="giallo-l"><span>;; (setq EXWM_WORKSPACE_LIST &#39;((1 . &quot;DP-3&quot;) (3 . &quot;DP-3&quot;)))</span></span></code></pre><h3 id="transperency-for-exwm-workspace">TRANSPERENCY FOR EXWM WORKSPACE</h3>
 <p>Exwm a er workspace gula te background show korar jonno jkhn amra kno workspace a switch korbo tkhn jate kore background ta dekha jai ay jonno jkhni amra kno workspaces a switch korbo tkhn jeno amader blank buffer ta show kore oi jonno ay config tuku add korte hobe.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;;; ONLY OPEN *blank* ON STARTUP IF EXWM WORKSPACE 0</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;;; ONLY OPEN *blank* ON STARTUP IF EXWM WORKSPACE 0</span></span>
 <span class="giallo-l"><span>(defun my/blank-buffer-in-first-workspace-only ()</span></span>
 <span class="giallo-l"><span>  &quot;Open blank buffer only in EXWM workspace 0.&quot;</span></span>
 <span class="giallo-l"><span>  (when (and (featurep &#39;exwm)</span></span>
@@ -970,7 +970,7 @@
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>(add-hook &#39;exwm-workspace-switch-hook #&#39;my/show-blank-if-no-buffer)</span></span></code></pre><h3 id="exwm-font-settings">EXWM FONT SETTINGS</h3>
 <p>Exwm a font rendering er smy error ascilo to oita k fix korar jonno ami ay code ta use korcilam.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(defun my/apply-font-settings (frame)</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(defun my/apply-font-settings (frame)</span></span>
 <span class="giallo-l"><span>  (with-selected-frame frame</span></span>
 <span class="giallo-l"><span>    (set-face-attribute &#39;default nil :font &quot;JetBrains Mono&quot; :height 160  :weight &#39;medium)))</span></span>
 <span class="giallo-l"><span>    ;; (set-face-attribute &#39;variable-pitch nil :font &quot;Ubuntu&quot; :height 100 :weight &#39;medium)</span></span>
@@ -980,18 +980,18 @@
 <span class="giallo-l"><span>    ;; (setq-default line-spacing 0.12)))</span></span>
 <span class="giallo-l"><span>(add-hook &#39;after-make-frame-functions #&#39;my/apply-font-settings)</span></span></code></pre><h3 id="exwm-extra-setting">EXWM EXTRA SETTING</h3>
 <p>Exwm use korar smy amr touchpad a kaj kortacilo na to oitar jonno ami akta bash script configi er sathe add kore diyeci. R exwm a joto buffer open kora hoyece, mane mone koro tmi 1st workspace a aco kintu tmr firefox open kora 3rd workspace a to tmi jdi M-b-i press koro to tmr sob buffer show korbe abong tmi j kno buffer a switch korte parbe se j workspace a e thakuk na kno.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(add-to-list &#39;default-frame-alist &#39;(fullscreen . maximized))</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(add-to-list &#39;default-frame-alist &#39;(fullscreen . maximized))</span></span>
 <span class="giallo-l"><span>(setq exwm-workspace-show-all-buffers t)</span></span>
 <span class="giallo-l"><span>(setq exwm-workspace-warp-cursor t)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>;;TOUCHPAD SETTINGS </span></span>
 <span class="giallo-l"><span>(start-process-shell-command &quot;touchpad-fix&quot; nil &quot;~/.config/emacs/scripts/exwm-touchpad-fix.sh&quot;)</span></span></code></pre><h3 id="app-luncher">APP LUNCHER</h3>
 <p>counsel-linux-app command diye app run korle j promt ta ase oitar theke ay app luncher ta besi interactive.</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(add-to-list &#39;load-path &quot;~/.config/emacs/scripts/&quot;)</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(add-to-list &#39;load-path &quot;~/.config/emacs/scripts/&quot;)</span></span>
 <span class="giallo-l"><span>(require &#39;app-launcher)</span></span></code></pre>
 <p>To er porer theke j code gula ace sob e amr personal config er vitore pore. Ami nijer subidha moto cusotmize korci jate kore akta fullfill window manager er moto kore e exwm k use kora jai.</p>
 <h3 id="exwm-power-menu">EXWM POWER-MENU</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(defun my/power-menu ()</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(defun my/power-menu ()</span></span>
 <span class="giallo-l"><span>  &quot;Launch the graphical power menu.&quot;</span></span>
 <span class="giallo-l"><span>  (interactive)</span></span>
 <span class="giallo-l"><span>  (start-process-shell-command &quot;wlogout&quot; nil &quot;wlogout&quot;))</span></span>
@@ -999,7 +999,7 @@
 <span class="giallo-l"><span>;; ====== KEYBINDING =====</span></span>
 <span class="giallo-l"><span>(global-set-key (kbd &quot;M-p&quot;) #&#39;my/power-menu) ;; FOR EMACS</span></span>
 <span class="giallo-l"><span>(define-key exwm-mode-map [?\M-p] #&#39;my/power-menu) ;; FOR EXWM</span></span></code></pre><h3 id="exwm-screen-lock">EXWM SCREEN LOCK</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(defun my/lock-screen ()</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(defun my/lock-screen ()</span></span>
 <span class="giallo-l"><span>  &quot;Lock the screen using i3lock.&quot;</span></span>
 <span class="giallo-l"><span>  (interactive)</span></span>
 <span class="giallo-l"><span>  (start-process &quot;betterlockscreen&quot; nil &quot;betterlockscreen&quot; &quot;--lock&quot;))</span></span>
@@ -1032,10 +1032,10 @@
 <ul>
 <li>
 <p>STARTING DUNST</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(start-process &quot;dunst&quot; nil &quot;dunst&quot;) ;; Starting Wireless conncetion </span></span></code></pre></li>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(start-process &quot;dunst&quot; nil &quot;dunst&quot;) ;; Starting Wireless conncetion </span></span></code></pre></li>
 <li>
 <p>VOLUME CONTROL</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(defun volume-increase ()</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(defun volume-increase ()</span></span>
 <span class="giallo-l"><span>  (interactive)</span></span>
 <span class="giallo-l"><span>  (start-process-shell-command &quot;volume up&quot; nil</span></span>
 <span class="giallo-l"><span>   &quot;pactl set-sink-volume @DEFAULT_SINK@ +5% &amp;&amp; notify-send &#39;Volume ↑&#39; \&quot;$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP &#39;\\d+%&#39; | head -1)\&quot;&quot;))</span></span>
@@ -1061,7 +1061,7 @@
 <span class="giallo-l"><span>(define-key exwm-mode-map(kbd &quot;&lt;XF86AudioMute&gt;&quot;) &#39;volume-mute-toggle)</span></span></code></pre></li>
 <li>
 <p>BRIGHTNESS CONTROL</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(defun brightness-increase ()</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(defun brightness-increase ()</span></span>
 <span class="giallo-l"><span>  (interactive)</span></span>
 <span class="giallo-l"><span>  (start-process-shell-command &quot;brightness up&quot; nil</span></span>
 <span class="giallo-l"><span>   &quot;brightnessctl set +3% &amp;&amp; notify-send &#39;Brightness ↑&#39; \&quot;$(brightnessctl g | awk &#39;{print int($1/10)*10 \&quot;%\&quot;}&#39;)\&quot;&quot;))</span></span>
@@ -1082,7 +1082,7 @@
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;&lt;XF86MonBrightnessDown&gt;&quot;) &#39;brightness-decrease)</span></span></code></pre></li>
 </ul>
 <h3 id="sddm-background-update">SDDM BACKGROUND UPDATE</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>(defun my/update-sddm-wallpaper ()</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>(defun my/update-sddm-wallpaper ()</span></span>
 <span class="giallo-l"><span>  &quot;Update SDDM wallpaper using external script in alacritty and notify via dunst.&quot;</span></span>
 <span class="giallo-l"><span>  (interactive)</span></span>
 <span class="giallo-l"><span>  (let* ((proc-name &quot;update-sddm-wallpaper&quot;)</span></span>
@@ -1108,7 +1108,7 @@
 <span class="giallo-l"><span>                                          &quot;notify-send &#39;SDDM&#39; &#39;✅ SDDM wallpaper updated successfully!&#39; -u normal&quot;)</span></span>
 <span class="giallo-l"><span>           (start-process-shell-command &quot;notify-sddm-fail&quot; nil</span></span>
 <span class="giallo-l"><span>                                        &quot;notify-send &#39;SDDM&#39; &#39;❌ SDDM wallpaper update failed!&#39; -u critical&quot;)))))))</span></span></code></pre><h3 id="shortcut-for-lunching-application">SHORTCUT FOR LUNCHING APPLICATION</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span> (defun my/launch-firefox ()</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span> (defun my/launch-firefox ()</span></span>
 <span class="giallo-l"><span>  &quot;launch firefox browser.&quot;</span></span>
 <span class="giallo-l"><span>  (interactive)</span></span>
 <span class="giallo-l"><span>  (start-process-shell-command &quot;firefox&quot; nil &quot;firefox&quot;))</span></span>
@@ -1188,7 +1188,7 @@
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>(global-set-key (kbd &quot;M-m x&quot;) #&#39;my/toggle-fullscreen)</span></span>
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;M-m x&quot;) #&#39;my/toggle-fullscreen)</span></span></code></pre><h3 id="customized-function-name">CUSTOMIZED FUNCTION NAME</h3>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; Power Menu</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; Power Menu</span></span>
 <span class="giallo-l"><span>(defalias &#39;Power-menu #&#39;my/power-menu)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>;; Lock Screen</span></span>
@@ -1204,7 +1204,7 @@
 <ul>
 <li>
 <p>BUFFER</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; Unbind M-b from any previous behavior (like backward-word)</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; Unbind M-b from any previous behavior (like backward-word)</span></span>
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;M-b&quot;) nil)  ;; Start defining a prefix for M-b in EXWM</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>;; EXWM controls under M-b</span></span>
@@ -1221,7 +1221,7 @@
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;M-b q&quot;) &#39;exwm-input-release-keyboard) ;; Release EXWM keyboard Release</span></span></code></pre></li>
 <li>
 <p>WINDOW</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; Define M-w as a prefix key for EXWM</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; Define M-w as a prefix key for EXWM</span></span>
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;M-w&quot;) nil)  ;; Start defining a prefix for M-w in EXWM</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>;; Window management keybindings</span></span>
@@ -1246,7 +1246,7 @@
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;M-w m&quot;) &#39;save-buffers-kill-emacs)</span></span></code></pre></li>
 <li>
 <p>DIRED AND MENU</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; Define M-d as a prefix key in EXWM mode</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; Define M-d as a prefix key in EXWM mode</span></span>
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;M-d&quot;) nil)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>;; Dired keybindings under M-d for exwm</span></span>
@@ -1258,7 +1258,7 @@
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;M-d p&quot;) &#39;peep-dired) ;; Peep Dired preview</span></span></code></pre></li>
 <li>
 <p>PERSONAL KEYBINDINGS</p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>;; ===== personal keybinding for menus =====</span></span>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>;; ===== personal keybinding for menus =====</span></span>
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;M-m&quot;) nil)</span></span>
 <span class="giallo-l"></span>
 <span class="giallo-l"><span>(define-key exwm-mode-map (kbd &quot;M-m m&quot;) #&#39;ORG-TO-MD-CONVERT)</span></span>
