@@ -5,8 +5,59 @@
     <link rel="self" type="application/atom+xml" href="https://ridowannhacked.github.io/FAKE-SYSTEM/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-08-27T00:00:00+00:00</updated>
+    <updated>2026-09-02T00:00:00+00:00</updated>
     <id>https://ridowannhacked.github.io/FAKE-SYSTEM/atom.xml</id>
+    <entry xml:lang="en">
+        <title>How to control android with scrcpy</title>
+        <published>2026-09-02T00:00:00+00:00</published>
+        <updated>2026-09-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-control-android-with-scrcpy/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-control-android-with-scrcpy/</id>
+        
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-control-android-with-scrcpy/">&lt;h1 id=&quot;installing-scrcpy&quot;&gt;Installing scrcpy&lt;/h1&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pacman&lt;/span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -S&lt;/span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; scrcpy&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Scrcpy install korar pore phone er setting a jeye search bar a &lt;code&gt;build number&lt;/code&gt; likhe search kore oita 7-8 bar…bar bar tap korar pore &lt;code&gt;Developer Option&lt;/code&gt; on hobe er pore Developer Option a jeye &lt;code&gt;USB debugging&lt;/code&gt; on kore dite hobe.&lt;/p&gt;
+&lt;h1 id=&quot;connecting-with-the-phone&quot;&gt;Connecting with the phone&lt;/h1&gt;
+&lt;p&gt;Er pore phone er charging cable nite hobe mane phn er port hisabe usb to type-c ba usb to type-b/d…. oi hisbae. Er pore phone er sathe laptop ba pc er connection diye just type korte hobe terminal a type korte hobe &lt;code&gt;scrcpy&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;a-simple-confusion&quot;&gt;A simple confusion&lt;/h2&gt;
+&lt;p&gt;Asole ami ayta test korci amr main arch installation a j ta te age diyai sob kicu install kora cilo to ayta te….to notun system a smossa hoileo hoite pare to jdi kno smossa hoi ami blog update kore dibo&lt;/p&gt;
+&lt;h1 id=&quot;phone-permission&quot;&gt;Phone permission&lt;/h1&gt;
+&lt;p&gt;Amr phone a usb plug korle oi khane screen share er akta otpion ase. To phone hisabe ayta change hoite pare to jar ta te jmn ase oita check kore dilei hobe r first bar akta permission cabe oita always allow checkbox a tik mark kore dilei hobe. Amr apatatao ayvabei kaj kortece&lt;/p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>How to fix microphone noice problem in arch linux</title>
+        <published>2026-09-02T00:00:00+00:00</published>
+        <updated>2026-09-02T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-fix-microphone-noice-problem-in-arch-linux/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-fix-microphone-noice-problem-in-arch-linux/</id>
+        
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-fix-microphone-noice-problem-in-arch-linux/">&lt;h1 id=&quot;installing-obs-and-easy-effects&quot;&gt;Installing obs and easy effects&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/home/l/NOTHING/FAKE-SYSTEM/static/obs_and_easyeffects/obs_and_easyeffects.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pacman&lt;/span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -S&lt;/span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; obs-studio easyeffects&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Er pore obs studio nijer moto kore setup kore niye screen add kore er pore mic add kore &lt;code&gt;easyeffects&lt;/code&gt; open kore just 4 te effects add korte hobe one by one&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Noise Reduction&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;   ↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Gate&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;   ↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Compressor&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;   ↓&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Limiter&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Asole amr ayvabei kaj hoice r kicu kora lage nai r just obs stuido er mic er controller ta &lt;code&gt;-8.3&lt;/code&gt; dB kore diyechi. Just ay tukui r kicu kora lageni&lt;/p&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>27 August Nothings Feel Good</title>
         <published>2026-08-27T00:00:00+00:00</published>

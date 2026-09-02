@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to control android with scrcpy - FAKE SYSTEM</title>
+    <link rel="stylesheet" href="https://ridowannhacked.github.io/FAKE-SYSTEM/style.css">
+    <link rel="icon" type="image/png" href="https://ridowannhacked.github.io/FAKE-SYSTEM/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="https://ridowannhacked.github.io/FAKE-SYSTEM/favicon-16x16.png">
+</head>
+<body>
+    <div class="container">
+        <button class="hamburger" id="hamburger-button" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-drawer" id="nav-drawer">
+            
+<div class="toc-sidebar" id="mobile-toc">
+    <h3>Table of Contents</h3>
+    <ul id="mobile-toc-list"></ul>
+</div>
+
+        </div>
+        
+        <header>
+            <nav>
+                <a href="https://ridowannhacked.github.io/FAKE-SYSTEM"
+                   class="home-link ">
+                   FAKE-SYSTEM
+                </a>
+                <div class="nav-links">
+		  <!-- THIS IS FOR MAIN FOLDERS  -->
+                    <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/blog" class="">BLOG</a>
+                    <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/whoami" class="">WHOAMI</a>
+                    <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/system" class="active">SYSTEM</a>
+                    <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups" class="">writeups</a>
+		    
+                    
+                    <a href="https://github.com/NOTHING-R/" target="_blank">GITHUB</a>
+                    
+                </div>
+            </nav>
+        </header>
+        
+
+        <main>
+            
+<div class="toc-sidebar" id="desktop-toc">
+    <h3>Table of Contents</h3>
+    <ul id="desktop-toc-list"></ul>
+</div>
+
+<article class="page-content">
+    <header class="page-header">
+        <h1><div class="back-nav"><a href="javascript:history.back()" class="back-link">../</a></div>How to control android with scrcpy</h1>
+        
+        <div class="page-meta">
+            <time datetime="2026-09-02">2026.09.02</time>
+        </div>
+        
+    </header>
+
+    <div class="content">
+        <h1 id="installing-scrcpy">Installing scrcpy</h1>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">sudo</span><span style="color: #F1FA8C;"> pacman</span><span style="color: #BD93F9;"> -S</span><span style="color: #F1FA8C;"> scrcpy</span></span></code></pre>
+<p>Scrcpy install korar pore phone er setting a jeye search bar a <code>build number</code> likhe search kore oita 7-8 bar…bar bar tap korar pore <code>Developer Option</code> on hobe er pore Developer Option a jeye <code>USB debugging</code> on kore dite hobe.</p>
+<h1 id="connecting-with-the-phone">Connecting with the phone</h1>
+<p>Er pore phone er charging cable nite hobe mane phn er port hisabe usb to type-c ba usb to type-b/d…. oi hisbae. Er pore phone er sathe laptop ba pc er connection diye just type korte hobe terminal a type korte hobe <code>scrcpy</code></p>
+<h2 id="a-simple-confusion">A simple confusion</h2>
+<p>Asole ami ayta test korci amr main arch installation a j ta te age diyai sob kicu install kora cilo to ayta te….to notun system a smossa hoileo hoite pare to jdi kno smossa hoi ami blog update kore dibo</p>
+<h1 id="phone-permission">Phone permission</h1>
+<p>Amr phone a usb plug korle oi khane screen share er akta otpion ase. To phone hisabe ayta change hoite pare to jar ta te jmn ase oita check kore dilei hobe r first bar akta permission cabe oita always allow checkbox a tik mark kore dilei hobe. Amr apatatao ayvabei kaj kortece</p>
+
+    </div>
+
+    
+</article>
+
+<script>
+// Auto-generate Table of Contents - LT Blog Style
+document.addEventListener('DOMContentLoaded', function() {
+    const content = document.querySelector('.content');
+    const desktopTocList = document.getElementById('desktop-toc-list');
+    const mobileTocList = document.getElementById('mobile-toc-list');
+    const desktopToc = document.getElementById('desktop-toc');
+    const mobileToc = document.getElementById('mobile-toc');
+
+    if (!content || !desktopTocList || !mobileTocList) return;
+
+    const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+    if (headings.length === 0) {
+        if (desktopToc) desktopToc.style.display = 'none';
+        if (mobileToc) mobileToc.style.display = 'none';
+        return;
+    }
+
+    const createToc = (tocList) => {
+        let currentLevel = 0;
+        let currentUl = tocList;
+        let levelStack = [tocList];
+
+        headings.forEach((heading, index) => {
+            if (!heading.id) {
+                heading.id = 'heading-' + index;
+            }
+
+            const level = parseInt(heading.tagName.charAt(1));
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + heading.id;
+            a.textContent = heading.textContent;
+            a.className = 'toc-' + heading.tagName.toLowerCase();
+
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                heading.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+
+            if (level > currentLevel) {
+                const nestedUl = document.createElement('ul');
+                if (levelStack[levelStack.length - 1].lastElementChild) {
+                    levelStack[levelStack.length - 1].lastElementChild.appendChild(nestedUl);
+                } else {
+                    levelStack[levelStack.length - 1].appendChild(nestedUl);
+                }
+                levelStack.push(nestedUl);
+                currentUl = nestedUl;
+            } else if (level < currentLevel) {
+                while (levelStack.length > level && levelStack.length > 1) {
+                    levelStack.pop();
+                }
+                currentUl = levelStack[levelStack.length - 1];
+            }
+
+            currentLevel = level;
+            li.appendChild(a);
+            currentUl.appendChild(li);
+        });
+    };
+
+    createToc(desktopTocList);
+    createToc(mobileTocList);
+});
+</script>
+
+<style>
+/* Additional TOC styling specific to different heading levels */
+.toc-h1 { font-weight: bold; color: #e6edf3 !important; }
+.toc-h2 { font-weight: normal; color: #c478ff !important; }
+.toc-h3 { font-weight: normal; color: #8b949e !important; }
+.toc-h4, .toc-h5, .toc-h6 { font-weight: normal; color: #7d8590 !important; }
+</style>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger-button');
+            const navDrawer = document.getElementById('nav-drawer');
+
+            if (hamburger && navDrawer) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('is-active');
+                    navDrawer.classList.toggle('is-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
