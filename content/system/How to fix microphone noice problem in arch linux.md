@@ -7,7 +7,7 @@ author = "FAKE"
 
 # Installing obs and easy effects
 
-![Alt text](/home/l/NOTHING/FAKE-SYSTEM/static/obs_and_easyeffects/obs_and_easyeffects.png)
+![Alt text](/https://github.com/ridowannhacked/FAKE-SYSTEM/blob/main/static/obs_and_easyeffects/obs_and_easyeffects.pnghome/l/NOTHING/FAKE-SYSTEM/static/obs_and_easyeffects/obs_and_easyeffects.png)
 
 ```bash
 sudo pacman -S obs-studio easyeffects

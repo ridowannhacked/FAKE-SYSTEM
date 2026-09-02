@@ -44,7 +44,7 @@
         <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-fix-microphone-noice-problem-in-arch-linux/</id>
         
         <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/how-to-fix-microphone-noice-problem-in-arch-linux/">&lt;h1 id=&quot;installing-obs-and-easy-effects&quot;&gt;Installing obs and easy effects&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/home/l/NOTHING/FAKE-SYSTEM/static/obs_and_easyeffects/obs_and_easyeffects.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/https://github.com/ridowannhacked/FAKE-SYSTEM/blob/main/static/obs_and_easyeffects/obs_and_easyeffects.pnghome/l/NOTHING/FAKE-SYSTEM/static/obs_and_easyeffects/obs_and_easyeffects.png&quot; alt=&quot;Alt text&quot; /&gt;&lt;/p&gt;
 &lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;sudo&lt;/span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; pacman&lt;/span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -S&lt;/span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; obs-studio easyeffects&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Er pore obs studio nijer moto kore setup kore niye screen add kore er pore mic add kore &lt;code&gt;easyeffects&lt;/code&gt; open kore just 4 te effects add korte hobe one by one&lt;/p&gt;
 &lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Noise Reduction&lt;/span&gt;&lt;/span&gt;
