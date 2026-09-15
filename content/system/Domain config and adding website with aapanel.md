@@ -6,24 +6,7 @@ author = "FAKE"
 
 # Complete Guide: Deploying a React Portfolio on VPS with aaPanel & Cloudflare
 
-This guide walks you through connecting your custom domain (`aliridowan.com`) to Cloudflare, pointing DNS records to your VPS (`157.173.115.123`), hosting your React production build on aaPanel, and configuring end-to-end SSL/TLS encryption.
-
----
-
-## Architecture Overview
-
-```
-User (Browser) 
-      │  HTTPS (Cloudflare Universal SSL)
-      ▼
-Cloudflare Edge Proxy (DNS, CDN, WAF)
-      │  HTTPS / Encrypted Origin Pull
-      ▼
-VPS Server (157.173.115.123: Nginx / aaPanel)
-      │  Serves static bundle + SPA fallback
-      ▼
-React Build Output (/www/wwwroot/aliridowan.com/index.html)
-```
+This guide walks you through connecting your custom domain to Cloudflare, pointing DNS records to your VPS, hosting your React production build on aaPanel, and configuring end-to-end SSL/TLS encryption.
 
 ---
 
@@ -33,7 +16,7 @@ React Build Output (/www/wwwroot/aliridowan.com/index.html)
    - Go to [dash.cloudflare.com](https://dash.cloudflare.com/) and sign in.
 2. **Add Domain:**
    - Click **Add a site** (or **Add domain**).
-   - Enter `aliridowan.com` and select the **Free Plan**.
+   - Enter `yourdomain` and select the **Free Plan**.
 3. **Scan Records:**
    - Cloudflare will automatically scan existing DNS records.
    - Click **Continue** to proceed to DNS review.
@@ -47,14 +30,14 @@ During domain migration, existing records from previous hosting providers (like 
 1. In the **Review your DNS records** screen:
    - **Root Domain Record:**
      - **Type:** `A`
-     - **Name:** `@` (or `aliridowan.com`)
-     - **IPv4 Address:** `157.173.115.123` (Your VPS Public IP)
+     - **Name:** `@` (or `yourdomain`)
+     - **IPv4 Address:** `Your VPS Public IP`
      - **Proxy status:** **Proxied** (Orange cloud enabled)
      - **TTL:** `Auto`
    - **WWW Subdomain Record:**
      - **Type:** `CNAME`
      - **Name:** `www`
-     - **Target:** `aliridowan.com`
+     - **Target:** `yourdomain`
      - **Proxy status:** **Proxied** (Orange cloud enabled)
      - **TTL:** `Auto`
 2. **Delete Old / Conflicting Records:**
@@ -67,8 +50,8 @@ During domain migration, existing records from previous hosting providers (like 
 
 Cloudflare will provide two authoritative nameservers (for example: `gina.ns.cloudflare.com` and `todd.ns.cloudflare.com`).
 
-1. Log in to the registrar where you purchased `aliridowan.com` (e.g., Namecheap, Hostinger, GoDaddy, Porkbun).
-2. Find the **DNS Management** or **Nameserver** section for `aliridowan.com`.
+1. Log in to the registrar where you purchased `yourdomain` (e.g., Namecheap, Hostinger, GoDaddy, Porkbun).
+2. Find the **DNS Management** or **Nameserver** section for `yourdomain`.
 3. Switch nameservers from **Default Registrar DNS** to **Custom DNS**.
 4. Enter the two Cloudflare nameservers provided.
 5. Save changes.
@@ -81,19 +64,18 @@ Cloudflare will provide two authoritative nameservers (for example: `gina.ns.clo
 ## Step 4: Configure the Site in aaPanel
 
 1. **Access aaPanel:**
-   - Navigate to your aaPanel panel: `http://157.173.115.123:27570/<security_entrance>`
 2. **Add Website:**
    - Click **Website** in the left sidebar.
    - Under the **PHP Project** (or **Static**) tab, click **Add site**.
    - **Domain:**
 
      ```text
-     aliridowan.com
-     www.aliridowan.com
+     yourdomain.com
+     www.yourdomain.com
      ```
 
-   - **Description:** `aliridowan_portfolio`
-   - **Root Directory:** Default is `/www/wwwroot/aliridowan.com`
+   - **Description:** `Website`
+   - **Root Directory:** Default is `/www/wwwroot/yourdomain`
    - **FTP / Database:** Leave as `Do not create` (not needed for static frontends).
    - **PHP Version:** Select `Static` (or leave default; Nginx handles delivery directly).
    - Click **Submit**.
@@ -118,10 +100,10 @@ npm run build
 
 ### 2. Upload to VPS via aaPanel
 
-1. In aaPanel, navigate to **Files** > `/www/wwwroot/aliridowan.com`.
+1. In aaPanel, navigate to **Files** > `/www/wwwroot/domain.com`.
 2. Delete the default files (`index.html`, `404.html`, `.htaccess`).
 3. Click **Upload** and upload your production files:
-   - Ensure `index.html` resides directly in `/www/wwwroot/aliridowan.com/index.html`.
+   - Ensure `index.html` resides directly in `/www/wwwroot/domain.com/index.html`.
    - Ensure the `assets/` or `static/` folders sit alongside `index.html`.
 
 ### 3. Setup Single Page App (SPA) URL Rewrite
@@ -151,7 +133,7 @@ To ensure secure HTTPS without redirect loops (`ERR_TOO_MANY_REDIRECTS`), follow
 1. **In Cloudflare Dashboard:**
    - Go to **SSL/TLS** > **Origin Server**.
    - Click **Create Certificate**.
-   - Keep default hostnames (`aliridowan.com`, `*.aliridowan.com`) and 15-year validity.
+   - Keep default hostnames (`domain.com`, `*.domain.com`) and 15-year validity.
    - Click **Create**.
    - Cloudflare displays an **Origin Certificate** and a **Private Key**.
 2. **In aaPanel:**
@@ -188,11 +170,11 @@ If you do not want to install a certificate on aaPanel right away:
 
   Check that the HTTP response returns `200 OK` and headers include `server: cloudflare`.
 - [ ] **Proxy Verification:**
-  Pinging `aliridowan.com` returns a Cloudflare anycast IP (e.g. `104.x.x.x` or `172.x.x.x`), successfully masking your origin VPS IP (`157.173.115.123`).
+  Pinging `aliridowan.com` returns a Cloudflare anycast IP (e.g. `104.x.x.x` or `172.x.x.x`), successfully masking your origin VPS IP .
 - [ ] **SPA Route Refresh:**
-  Navigate to an internal route (e.g., `https://aliridowan.com/about`) and reload to verify client routing handles the path seamlessly.
+  Navigate to an internal route (e.g., `https://domain.com/about`) and reload to verify client routing handles the path seamlessly.
 - [ ] **SSL Grade:**
-  Confirm green padlock status on both `https://aliridowan.com` and `https://www.aliridowan.com`.
+  Confirm green padlock status on both `https://domain.com` and `https://www.domain.com`.
 
 ---
 
@@ -200,7 +182,7 @@ If you do not want to install a certificate on aaPanel right away:
 
 | Issue | Cause | Fix |
 |---|---|---|
-| **Old host page displays** | Cloudflare `A` record points to old provider IP or local DNS cache. | Update Cloudflare `A` record to `157.173.115.123`, flush DNS (`ipconfig /flushdns` or browser cache). |
+| **Old host page displays** | Cloudflare `A` record points to old provider IP or local DNS cache. | Update Cloudflare `A` record to `server ip`, flush DNS (`ipconfig /flushdns` or browser cache). |
 | **`ERR_TOO_MANY_REDIRECTS`** | Cloudflare is set to *Flexible*, while aaPanel Nginx forces HTTPS. | Change Cloudflare SSL to **Full** / **Full (strict)**, or disable origin-level HTTPS redirection. |
 | **`404 Not Found` on refresh** | Single Page Application route missing Nginx rewrite. | Add `try_files $uri $uri/ /index.html;` in aaPanel **URL rewrite**. |
 | **`521 Web Server Is Down`** | Nginx stopped or VPS firewall blocking ports 80/443. | Check Nginx status in aaPanel; run `ufw allow 80/tcp` and `ufw allow 443/tcp` on your VPS. |

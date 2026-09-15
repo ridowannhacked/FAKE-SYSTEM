@@ -64,19 +64,7 @@
 
     <div class="content">
         <h1 id="complete-guide-deploying-a-react-portfolio-on-vps-with-aapanel-cloudflare">Complete Guide: Deploying a React Portfolio on VPS with aaPanel &amp; Cloudflare</h1>
-<p>This guide walks you through connecting your custom domain (<code>aliridowan.com</code>) to Cloudflare, pointing DNS records to your VPS (<code>157.173.115.123</code>), hosting your React production build on aaPanel, and configuring end-to-end SSL/TLS encryption.</p>
-<hr />
-<h2 id="architecture-overview">Architecture Overview</h2>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>User (Browser) </span></span>
-<span class="giallo-l"><span>      │  HTTPS (Cloudflare Universal SSL)</span></span>
-<span class="giallo-l"><span>      ▼</span></span>
-<span class="giallo-l"><span>Cloudflare Edge Proxy (DNS, CDN, WAF)</span></span>
-<span class="giallo-l"><span>      │  HTTPS / Encrypted Origin Pull</span></span>
-<span class="giallo-l"><span>      ▼</span></span>
-<span class="giallo-l"><span>VPS Server (157.173.115.123: Nginx / aaPanel)</span></span>
-<span class="giallo-l"><span>      │  Serves static bundle + SPA fallback</span></span>
-<span class="giallo-l"><span>      ▼</span></span>
-<span class="giallo-l"><span>React Build Output (/www/wwwroot/aliridowan.com/index.html)</span></span></code></pre>
+<p>This guide walks you through connecting your custom domain to Cloudflare, pointing DNS records to your VPS, hosting your React production build on aaPanel, and configuring end-to-end SSL/TLS encryption.</p>
 <hr />
 <h2 id="step-1-add-your-domain-to-cloudflare">Step 1: Add Your Domain to Cloudflare</h2>
 <ol>
@@ -88,7 +76,7 @@
 <li><strong>Add Domain:</strong>
 <ul>
 <li>Click <strong>Add a site</strong> (or <strong>Add domain</strong>).</li>
-<li>Enter <code>aliridowan.com</code> and select the <strong>Free Plan</strong>.</li>
+<li>Enter <code>yourdomain</code> and select the <strong>Free Plan</strong>.</li>
 </ul>
 </li>
 <li><strong>Scan Records:</strong>
@@ -107,8 +95,8 @@
 <li><strong>Root Domain Record:</strong>
 <ul>
 <li><strong>Type:</strong> <code>A</code></li>
-<li><strong>Name:</strong> <code>@</code> (or <code>aliridowan.com</code>)</li>
-<li><strong>IPv4 Address:</strong> <code>157.173.115.123</code> (Your VPS Public IP)</li>
+<li><strong>Name:</strong> <code>@</code> (or <code>yourdomain</code>)</li>
+<li><strong>IPv4 Address:</strong> <code>Your VPS Public IP</code></li>
 <li><strong>Proxy status:</strong> <strong>Proxied</strong> (Orange cloud enabled)</li>
 <li><strong>TTL:</strong> <code>Auto</code></li>
 </ul>
@@ -117,7 +105,7 @@
 <ul>
 <li><strong>Type:</strong> <code>CNAME</code></li>
 <li><strong>Name:</strong> <code>www</code></li>
-<li><strong>Target:</strong> <code>aliridowan.com</code></li>
+<li><strong>Target:</strong> <code>yourdomain</code></li>
 <li><strong>Proxy status:</strong> <strong>Proxied</strong> (Orange cloud enabled)</li>
 <li><strong>TTL:</strong> <code>Auto</code></li>
 </ul>
@@ -135,8 +123,8 @@
 <h2 id="step-3-update-nameservers-at-your-domain-registrar">Step 3: Update Nameservers at Your Domain Registrar</h2>
 <p>Cloudflare will provide two authoritative nameservers (for example: <code>gina.ns.cloudflare.com</code> and <code>todd.ns.cloudflare.com</code>).</p>
 <ol>
-<li>Log in to the registrar where you purchased <code>aliridowan.com</code> (e.g., Namecheap, Hostinger, GoDaddy, Porkbun).</li>
-<li>Find the <strong>DNS Management</strong> or <strong>Nameserver</strong> section for <code>aliridowan.com</code>.</li>
+<li>Log in to the registrar where you purchased <code>yourdomain</code> (e.g., Namecheap, Hostinger, GoDaddy, Porkbun).</li>
+<li>Find the <strong>DNS Management</strong> or <strong>Nameserver</strong> section for <code>yourdomain</code>.</li>
 <li>Switch nameservers from <strong>Default Registrar DNS</strong> to <strong>Custom DNS</strong>.</li>
 <li>Enter the two Cloudflare nameservers provided.</li>
 <li>Save changes.</li>
@@ -148,11 +136,7 @@
 <hr />
 <h2 id="step-4-configure-the-site-in-aapanel">Step 4: Configure the Site in aaPanel</h2>
 <ol>
-<li><strong>Access aaPanel:</strong>
-<ul>
-<li>Navigate to your aaPanel panel: <code>http://157.173.115.123:27570/&lt;security_entrance&gt;</code></li>
-</ul>
-</li>
+<li><strong>Access aaPanel:</strong></li>
 <li><strong>Add Website:</strong>
 <ul>
 <li>
@@ -163,13 +147,13 @@
 </li>
 <li>
 <p><strong>Domain:</strong></p>
-<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>aliridowan.com</span></span>
-<span class="giallo-l"><span>www.aliridowan.com</span></span></code></pre></li>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>yourdomain.com</span></span>
+<span class="giallo-l"><span>www.yourdomain.com</span></span></code></pre></li>
 <li>
-<p><strong>Description:</strong> <code>aliridowan_portfolio</code></p>
+<p><strong>Description:</strong> <code>Website</code></p>
 </li>
 <li>
-<p><strong>Root Directory:</strong> Default is <code>/www/wwwroot/aliridowan.com</code></p>
+<p><strong>Root Directory:</strong> Default is <code>/www/wwwroot/yourdomain</code></p>
 </li>
 <li>
 <p><strong>FTP / Database:</strong> Leave as <code>Do not create</code> (not needed for static frontends).</p>
@@ -195,11 +179,11 @@
 <span class="giallo-l"><span style="color: #50FA7B;">npm</span><span style="color: #F1FA8C;"> run build</span></span>
 <span class="giallo-l"><span style="color: #6272A4;"># Output directory: ./build</span></span></code></pre><h3 id="2-upload-to-vps-via-aapanel">2. Upload to VPS via aaPanel</h3>
 <ol>
-<li>In aaPanel, navigate to <strong>Files</strong> &gt; <code>/www/wwwroot/aliridowan.com</code>.</li>
+<li>In aaPanel, navigate to <strong>Files</strong> &gt; <code>/www/wwwroot/domain.com</code>.</li>
 <li>Delete the default files (<code>index.html</code>, <code>404.html</code>, <code>.htaccess</code>).</li>
 <li>Click <strong>Upload</strong> and upload your production files:
 <ul>
-<li>Ensure <code>index.html</code> resides directly in <code>/www/wwwroot/aliridowan.com/index.html</code>.</li>
+<li>Ensure <code>index.html</code> resides directly in <code>/www/wwwroot/domain.com/index.html</code>.</li>
 <li>Ensure the <code>assets/</code> or <code>static/</code> folders sit alongside <code>index.html</code>.</li>
 </ul>
 </li>
@@ -231,7 +215,7 @@
 <ul>
 <li>Go to <strong>SSL/TLS</strong> &gt; <strong>Origin Server</strong>.</li>
 <li>Click <strong>Create Certificate</strong>.</li>
-<li>Keep default hostnames (<code>aliridowan.com</code>, <code>*.aliridowan.com</code>) and 15-year validity.</li>
+<li>Keep default hostnames (<code>domain.com</code>, <code>*.domain.com</code>) and 15-year validity.</li>
 <li>Click <strong>Create</strong>.</li>
 <li>Cloudflare displays an <strong>Origin Certificate</strong> and a <strong>Private Key</strong>.</li>
 </ul>
@@ -274,23 +258,23 @@
 <li>
 <p><input disabled="" type="checkbox"/>
 <strong>Proxy Verification:</strong>
-Pinging <code>aliridowan.com</code> returns a Cloudflare anycast IP (e.g. <code>104.x.x.x</code> or <code>172.x.x.x</code>), successfully masking your origin VPS IP (<code>157.173.115.123</code>).</p>
+Pinging <code>aliridowan.com</code> returns a Cloudflare anycast IP (e.g. <code>104.x.x.x</code> or <code>172.x.x.x</code>), successfully masking your origin VPS IP .</p>
 </li>
 <li>
 <p><input disabled="" type="checkbox"/>
 <strong>SPA Route Refresh:</strong>
-Navigate to an internal route (e.g., <code>https://aliridowan.com/about</code>) and reload to verify client routing handles the path seamlessly.</p>
+Navigate to an internal route (e.g., <code>https://domain.com/about</code>) and reload to verify client routing handles the path seamlessly.</p>
 </li>
 <li>
 <p><input disabled="" type="checkbox"/>
 <strong>SSL Grade:</strong>
-Confirm green padlock status on both <code>https://aliridowan.com</code> and <code>https://www.aliridowan.com</code>.</p>
+Confirm green padlock status on both <code>https://domain.com</code> and <code>https://www.domain.com</code>.</p>
 </li>
 </ul>
 <hr />
 <h2 id="common-troubleshooting">Common Troubleshooting</h2>
 <table><thead><tr><th>Issue</th><th>Cause</th><th>Fix</th></tr></thead><tbody>
-<tr><td><strong>Old host page displays</strong></td><td>Cloudflare <code>A</code> record points to old provider IP or local DNS cache.</td><td>Update Cloudflare <code>A</code> record to <code>157.173.115.123</code>, flush DNS (<code>ipconfig /flushdns</code> or browser cache).</td></tr>
+<tr><td><strong>Old host page displays</strong></td><td>Cloudflare <code>A</code> record points to old provider IP or local DNS cache.</td><td>Update Cloudflare <code>A</code> record to <code>server ip</code>, flush DNS (<code>ipconfig /flushdns</code> or browser cache).</td></tr>
 <tr><td><strong><code>ERR_TOO_MANY_REDIRECTS</code></strong></td><td>Cloudflare is set to <em>Flexible</em>, while aaPanel Nginx forces HTTPS.</td><td>Change Cloudflare SSL to <strong>Full</strong> / <strong>Full (strict)</strong>, or disable origin-level HTTPS redirection.</td></tr>
 <tr><td><strong><code>404 Not Found</code> on refresh</strong></td><td>Single Page Application route missing Nginx rewrite.</td><td>Add <code>try_files $uri $uri/ /index.html;</code> in aaPanel <strong>URL rewrite</strong>.</td></tr>
 <tr><td><strong><code>521 Web Server Is Down</code></strong></td><td>Nginx stopped or VPS firewall blocking ports 80/443.</td><td>Check Nginx status in aaPanel; run <code>ufw allow 80/tcp</code> and <code>ufw allow 443/tcp</code> on your VPS.</td></tr>
