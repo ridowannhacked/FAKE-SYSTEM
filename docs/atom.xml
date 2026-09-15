@@ -5,8 +5,255 @@
     <link rel="self" type="application/atom+xml" href="https://ridowannhacked.github.io/FAKE-SYSTEM/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2026-09-02T00:00:00+00:00</updated>
+    <updated>2026-10-16T00:00:00+00:00</updated>
     <id>https://ridowannhacked.github.io/FAKE-SYSTEM/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Complete Guide: Deploying a React Portfolio on VPS with aaPanel &amp; Cloudflare</title>
+        <published>2026-10-16T00:00:00+00:00</published>
+        <updated>2026-10-16T00:00:00+00:00</updated>
+        
+        <author>
+          <name>Unknown</name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://ridowannhacked.github.io/FAKE-SYSTEM/system/domain-config-and-adding-website-with-aapanel/"/>
+        <id>https://ridowannhacked.github.io/FAKE-SYSTEM/system/domain-config-and-adding-website-with-aapanel/</id>
+        
+        <content type="html" xml:base="https://ridowannhacked.github.io/FAKE-SYSTEM/system/domain-config-and-adding-website-with-aapanel/">&lt;h1 id=&quot;complete-guide-deploying-a-react-portfolio-on-vps-with-aapanel-cloudflare&quot;&gt;Complete Guide: Deploying a React Portfolio on VPS with aaPanel &amp;amp; Cloudflare&lt;/h1&gt;
+&lt;p&gt;This guide walks you through connecting your custom domain (&lt;code&gt;aliridowan.com&lt;/code&gt;) to Cloudflare, pointing DNS records to your VPS (&lt;code&gt;157.173.115.123&lt;/code&gt;), hosting your React production build on aaPanel, and configuring end-to-end SSL/TLS encryption.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;architecture-overview&quot;&gt;Architecture Overview&lt;/h2&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;User (Browser) &lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      │  HTTPS (Cloudflare Universal SSL)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      ▼&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;Cloudflare Edge Proxy (DNS, CDN, WAF)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      │  HTTPS / Encrypted Origin Pull&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      ▼&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;VPS Server (157.173.115.123: Nginx / aaPanel)&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      │  Serves static bundle + SPA fallback&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;      ▼&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;React Build Output (/www/wwwroot/aliridowan.com/index.html)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-1-add-your-domain-to-cloudflare&quot;&gt;Step 1: Add Your Domain to Cloudflare&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Log in to Cloudflare:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a rel=&quot;noopener nofollow noreferrer external&quot; target=&quot;_blank&quot; href=&quot;https://dash.cloudflare.com/&quot;&gt;dash.cloudflare.com&lt;/a&gt; and sign in.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add Domain:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Click &lt;strong&gt;Add a site&lt;/strong&gt; (or &lt;strong&gt;Add domain&lt;/strong&gt;).&lt;/li&gt;
+&lt;li&gt;Enter &lt;code&gt;aliridowan.com&lt;/code&gt; and select the &lt;strong&gt;Free Plan&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scan Records:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloudflare will automatically scan existing DNS records.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue&lt;/strong&gt; to proceed to DNS review.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-2-configure-accurate-dns-records&quot;&gt;Step 2: Configure Accurate DNS Records&lt;/h2&gt;
+&lt;p&gt;During domain migration, existing records from previous hosting providers (like old shared hosts) must be updated to your VPS IP.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In the &lt;strong&gt;Review your DNS records&lt;/strong&gt; screen:
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Root Domain Record:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Type:&lt;/strong&gt; &lt;code&gt;A&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; &lt;code&gt;@&lt;/code&gt; (or &lt;code&gt;aliridowan.com&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IPv4 Address:&lt;/strong&gt; &lt;code&gt;157.173.115.123&lt;/code&gt; (Your VPS Public IP)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Proxy status:&lt;/strong&gt; &lt;strong&gt;Proxied&lt;/strong&gt; (Orange cloud enabled)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TTL:&lt;/strong&gt; &lt;code&gt;Auto&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WWW Subdomain Record:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Type:&lt;/strong&gt; &lt;code&gt;CNAME&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Name:&lt;/strong&gt; &lt;code&gt;www&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Target:&lt;/strong&gt; &lt;code&gt;aliridowan.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Proxy status:&lt;/strong&gt; &lt;strong&gt;Proxied&lt;/strong&gt; (Orange cloud enabled)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;TTL:&lt;/strong&gt; &lt;code&gt;Auto&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Delete Old / Conflicting Records:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;If any old &lt;code&gt;A&lt;/code&gt; record points to an outdated IP (e.g. &lt;code&gt;103.65.139.18&lt;/code&gt;), edit or delete it immediately.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Continue to activation&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-3-update-nameservers-at-your-domain-registrar&quot;&gt;Step 3: Update Nameservers at Your Domain Registrar&lt;/h2&gt;
+&lt;p&gt;Cloudflare will provide two authoritative nameservers (for example: &lt;code&gt;gina.ns.cloudflare.com&lt;/code&gt; and &lt;code&gt;todd.ns.cloudflare.com&lt;/code&gt;).&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Log in to the registrar where you purchased &lt;code&gt;aliridowan.com&lt;/code&gt; (e.g., Namecheap, Hostinger, GoDaddy, Porkbun).&lt;/li&gt;
+&lt;li&gt;Find the &lt;strong&gt;DNS Management&lt;/strong&gt; or &lt;strong&gt;Nameserver&lt;/strong&gt; section for &lt;code&gt;aliridowan.com&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Switch nameservers from &lt;strong&gt;Default Registrar DNS&lt;/strong&gt; to &lt;strong&gt;Custom DNS&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Enter the two Cloudflare nameservers provided.&lt;/li&gt;
+&lt;li&gt;Save changes.&lt;/li&gt;
+&lt;li&gt;Return to Cloudflare and click &lt;strong&gt;Done, check nameservers&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Nameserver propagation typically takes between 5 to 30 minutes, though global registrar propagation can take up to 24 hours.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-4-configure-the-site-in-aapanel&quot;&gt;Step 4: Configure the Site in aaPanel&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Access aaPanel:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Navigate to your aaPanel panel: &lt;code&gt;http://157.173.115.123:27570/&amp;lt;security_entrance&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Add Website:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;strong&gt;Website&lt;/strong&gt; in the left sidebar.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Under the &lt;strong&gt;PHP Project&lt;/strong&gt; (or &lt;strong&gt;Static&lt;/strong&gt;) tab, click &lt;strong&gt;Add site&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Domain:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;aliridowan.com&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;www.aliridowan.com&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Description:&lt;/strong&gt; &lt;code&gt;aliridowan_portfolio&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Root Directory:&lt;/strong&gt; Default is &lt;code&gt;/www/wwwroot/aliridowan.com&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;FTP / Database:&lt;/strong&gt; Leave as &lt;code&gt;Do not create&lt;/code&gt; (not needed for static frontends).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PHP Version:&lt;/strong&gt; Select &lt;code&gt;Static&lt;/code&gt; (or leave default; Nginx handles delivery directly).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;strong&gt;Submit&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-5-build-deploy-your-react-portfolio&quot;&gt;Step 5: Build &amp;amp; Deploy Your React Portfolio&lt;/h2&gt;
+&lt;h3 id=&quot;1-build-locally&quot;&gt;1. Build Locally&lt;/h3&gt;
+&lt;p&gt;Inside your React project directory on your development machine:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# If using Vite&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; run build&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# Output directory: ./dist&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# If using Create React App&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;npm&lt;/span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; run build&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #6272A4;&quot;&gt;# Output directory: ./build&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&quot;2-upload-to-vps-via-aapanel&quot;&gt;2. Upload to VPS via aaPanel&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;In aaPanel, navigate to &lt;strong&gt;Files&lt;/strong&gt; &amp;gt; &lt;code&gt;/www/wwwroot/aliridowan.com&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Delete the default files (&lt;code&gt;index.html&lt;/code&gt;, &lt;code&gt;404.html&lt;/code&gt;, &lt;code&gt;.htaccess&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Upload&lt;/strong&gt; and upload your production files:
+&lt;ul&gt;
+&lt;li&gt;Ensure &lt;code&gt;index.html&lt;/code&gt; resides directly in &lt;code&gt;/www/wwwroot/aliridowan.com/index.html&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Ensure the &lt;code&gt;assets/&lt;/code&gt; or &lt;code&gt;static/&lt;/code&gt; folders sit alongside &lt;code&gt;index.html&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;3-setup-single-page-app-spa-url-rewrite&quot;&gt;3. Setup Single Page App (SPA) URL Rewrite&lt;/h3&gt;
+&lt;p&gt;If your portfolio uses React Router (e.g. &lt;code&gt;/projects&lt;/code&gt;, &lt;code&gt;/about&lt;/code&gt;), refreshing any page will cause a &lt;code&gt;404 Not Found&lt;/code&gt; without Nginx rewrite rules.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Go to &lt;strong&gt;Website&lt;/strong&gt; &amp;gt; click on &lt;strong&gt;aliridowan.com&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Select &lt;strong&gt;URL rewrite&lt;/strong&gt; from the left tab.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add the following rule:&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;nginx&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;location&lt;/span&gt;&lt;span&gt; / {&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #FF79C6;&quot;&gt;    try_files&lt;/span&gt;&lt;span&gt; $uri $uri/ /index.html;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Click &lt;strong&gt;Save&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-6-configure-ssl-tls-cloudflare-aapanel&quot;&gt;Step 6: Configure SSL/TLS (Cloudflare &amp;amp; aaPanel)&lt;/h2&gt;
+&lt;p&gt;To ensure secure HTTPS without redirect loops (&lt;code&gt;ERR_TOO_MANY_REDIRECTS&lt;/code&gt;), follow these configurations:&lt;/p&gt;
+&lt;h3 id=&quot;method-a-cloudflare-origin-ca-recommended-for-best-security&quot;&gt;Method A: Cloudflare Origin CA (Recommended for Best Security)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;In Cloudflare Dashboard:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;strong&gt;SSL/TLS&lt;/strong&gt; &amp;gt; &lt;strong&gt;Origin Server&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Create Certificate&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Keep default hostnames (&lt;code&gt;aliridowan.com&lt;/code&gt;, &lt;code&gt;*.aliridowan.com&lt;/code&gt;) and 15-year validity.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Create&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Cloudflare displays an &lt;strong&gt;Origin Certificate&lt;/strong&gt; and a &lt;strong&gt;Private Key&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In aaPanel:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;strong&gt;Website&lt;/strong&gt; &amp;gt; &lt;strong&gt;aliridowan.com&lt;/strong&gt; &amp;gt; &lt;strong&gt;SSL&lt;/strong&gt; tab.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Business certificate&lt;/strong&gt; (or manual entry).&lt;/li&gt;
+&lt;li&gt;Paste the &lt;strong&gt;Private Key&lt;/strong&gt; into the &lt;code&gt;Private key (KEY)&lt;/code&gt; field.&lt;/li&gt;
+&lt;li&gt;Paste the &lt;strong&gt;Origin Certificate&lt;/strong&gt; into the &lt;code&gt;Certificate (CRT/PEM)&lt;/code&gt; field.&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Save and enable SSL&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Set Cloudflare SSL Mode:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;In Cloudflare, go to &lt;strong&gt;SSL/TLS&lt;/strong&gt; &amp;gt; &lt;strong&gt;Overview&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Select &lt;strong&gt;Full (strict)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Under &lt;strong&gt;SSL/TLS&lt;/strong&gt; &amp;gt; &lt;strong&gt;Edge Certificates&lt;/strong&gt;, enable &lt;strong&gt;Always Use HTTPS&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3 id=&quot;method-b-flexible-ssl-quick-setup&quot;&gt;Method B: Flexible SSL (Quick Setup)&lt;/h3&gt;
+&lt;p&gt;If you do not want to install a certificate on aaPanel right away:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;In Cloudflare, set &lt;strong&gt;SSL/TLS mode&lt;/strong&gt; to &lt;strong&gt;Flexible&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Traffic between browser and Cloudflare is encrypted (HTTPS).&lt;/li&gt;
+&lt;li&gt;Cloudflare reaches your VPS over port 80 (HTTP).&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Important:&lt;/em&gt; Do not enable force-HTTPS redirects on aaPanel when using Flexible mode, as this creates an infinite loop.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;step-7-verification-testing-checklist&quot;&gt;Step 7: Verification &amp;amp; Testing Checklist&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;/&gt;
+&lt;strong&gt;DNS Resolution:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot; &gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;curl&lt;/span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -I&lt;/span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; https://aliridowan.com&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check that the HTTP response returns &lt;code&gt;200 OK&lt;/code&gt; and headers include &lt;code&gt;server: cloudflare&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;/&gt;
+&lt;strong&gt;Proxy Verification:&lt;/strong&gt;
+Pinging &lt;code&gt;aliridowan.com&lt;/code&gt; returns a Cloudflare anycast IP (e.g. &lt;code&gt;104.x.x.x&lt;/code&gt; or &lt;code&gt;172.x.x.x&lt;/code&gt;), successfully masking your origin VPS IP (&lt;code&gt;157.173.115.123&lt;/code&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;/&gt;
+&lt;strong&gt;SPA Route Refresh:&lt;/strong&gt;
+Navigate to an internal route (e.g., &lt;code&gt;https://aliridowan.com/about&lt;/code&gt;) and reload to verify client routing handles the path seamlessly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;input disabled=&quot;&quot; type=&quot;checkbox&quot;/&gt;
+&lt;strong&gt;SSL Grade:&lt;/strong&gt;
+Confirm green padlock status on both &lt;code&gt;https://aliridowan.com&lt;/code&gt; and &lt;code&gt;https://www.aliridowan.com&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&quot;common-troubleshooting&quot;&gt;Common Troubleshooting&lt;/h2&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Issue&lt;/th&gt;&lt;th&gt;Cause&lt;/th&gt;&lt;th&gt;Fix&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;Old host page displays&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Cloudflare &lt;code&gt;A&lt;/code&gt; record points to old provider IP or local DNS cache.&lt;/td&gt;&lt;td&gt;Update Cloudflare &lt;code&gt;A&lt;/code&gt; record to &lt;code&gt;157.173.115.123&lt;/code&gt;, flush DNS (&lt;code&gt;ipconfig /flushdns&lt;/code&gt; or browser cache).&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;&lt;code&gt;ERR_TOO_MANY_REDIRECTS&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Cloudflare is set to &lt;em&gt;Flexible&lt;/em&gt;, while aaPanel Nginx forces HTTPS.&lt;/td&gt;&lt;td&gt;Change Cloudflare SSL to &lt;strong&gt;Full&lt;/strong&gt; / &lt;strong&gt;Full (strict)&lt;/strong&gt;, or disable origin-level HTTPS redirection.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;&lt;code&gt;404 Not Found&lt;/code&gt; on refresh&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Single Page Application route missing Nginx rewrite.&lt;/td&gt;&lt;td&gt;Add &lt;code&gt;try_files $uri $uri/ /index.html;&lt;/code&gt; in aaPanel &lt;strong&gt;URL rewrite&lt;/strong&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;strong&gt;&lt;code&gt;521 Web Server Is Down&lt;/code&gt;&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;Nginx stopped or VPS firewall blocking ports 80/443.&lt;/td&gt;&lt;td&gt;Check Nginx status in aaPanel; run &lt;code&gt;ufw allow 80/tcp&lt;/code&gt; and &lt;code&gt;ufw allow 443/tcp&lt;/code&gt; on your VPS.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</content>
+        
+    </entry>
     <entry xml:lang="en">
         <title>How to control android with scrcpy</title>
         <published>2026-09-02T00:00:00+00:00</published>

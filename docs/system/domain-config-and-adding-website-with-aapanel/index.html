@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Guide: Deploying a React Portfolio on VPS with aaPanel &amp; Cloudflare - FAKE SYSTEM</title>
+    <link rel="stylesheet" href="https://ridowannhacked.github.io/FAKE-SYSTEM/style.css">
+    <link rel="icon" type="image/png" href="https://ridowannhacked.github.io/FAKE-SYSTEM/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="https://ridowannhacked.github.io/FAKE-SYSTEM/favicon-16x16.png">
+</head>
+<body>
+    <div class="container">
+        <button class="hamburger" id="hamburger-button" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-drawer" id="nav-drawer">
+            
+<div class="toc-sidebar" id="mobile-toc">
+    <h3>Table of Contents</h3>
+    <ul id="mobile-toc-list"></ul>
+</div>
+
+        </div>
+        
+        <header>
+            <nav>
+                <a href="https://ridowannhacked.github.io/FAKE-SYSTEM"
+                   class="home-link ">
+                   FAKE-SYSTEM
+                </a>
+                <div class="nav-links">
+		  <!-- THIS IS FOR MAIN FOLDERS  -->
+                    <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/blog" class="">BLOG</a>
+                    <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/whoami" class="">WHOAMI</a>
+                    <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/system" class="active">SYSTEM</a>
+                    <a href="https://ridowannhacked.github.io/FAKE-SYSTEM/writeups" class="">writeups</a>
+		    
+                    
+                    <a href="https://github.com/NOTHING-R/" target="_blank">GITHUB</a>
+                    
+                </div>
+            </nav>
+        </header>
+        
+
+        <main>
+            
+<div class="toc-sidebar" id="desktop-toc">
+    <h3>Table of Contents</h3>
+    <ul id="desktop-toc-list"></ul>
+</div>
+
+<article class="page-content">
+    <header class="page-header">
+        <h1><div class="back-nav"><a href="javascript:history.back()" class="back-link">../</a></div>Complete Guide: Deploying a React Portfolio on VPS with aaPanel &amp; Cloudflare</h1>
+        
+        <div class="page-meta">
+            <time datetime="2026-10-16">2026.10.16</time>
+        </div>
+        
+    </header>
+
+    <div class="content">
+        <h1 id="complete-guide-deploying-a-react-portfolio-on-vps-with-aapanel-cloudflare">Complete Guide: Deploying a React Portfolio on VPS with aaPanel &amp; Cloudflare</h1>
+<p>This guide walks you through connecting your custom domain (<code>aliridowan.com</code>) to Cloudflare, pointing DNS records to your VPS (<code>157.173.115.123</code>), hosting your React production build on aaPanel, and configuring end-to-end SSL/TLS encryption.</p>
+<hr />
+<h2 id="architecture-overview">Architecture Overview</h2>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>User (Browser) </span></span>
+<span class="giallo-l"><span>      │  HTTPS (Cloudflare Universal SSL)</span></span>
+<span class="giallo-l"><span>      ▼</span></span>
+<span class="giallo-l"><span>Cloudflare Edge Proxy (DNS, CDN, WAF)</span></span>
+<span class="giallo-l"><span>      │  HTTPS / Encrypted Origin Pull</span></span>
+<span class="giallo-l"><span>      ▼</span></span>
+<span class="giallo-l"><span>VPS Server (157.173.115.123: Nginx / aaPanel)</span></span>
+<span class="giallo-l"><span>      │  Serves static bundle + SPA fallback</span></span>
+<span class="giallo-l"><span>      ▼</span></span>
+<span class="giallo-l"><span>React Build Output (/www/wwwroot/aliridowan.com/index.html)</span></span></code></pre>
+<hr />
+<h2 id="step-1-add-your-domain-to-cloudflare">Step 1: Add Your Domain to Cloudflare</h2>
+<ol>
+<li><strong>Log in to Cloudflare:</strong>
+<ul>
+<li>Go to <a rel="noopener nofollow noreferrer external" target="_blank" href="https://dash.cloudflare.com/">dash.cloudflare.com</a> and sign in.</li>
+</ul>
+</li>
+<li><strong>Add Domain:</strong>
+<ul>
+<li>Click <strong>Add a site</strong> (or <strong>Add domain</strong>).</li>
+<li>Enter <code>aliridowan.com</code> and select the <strong>Free Plan</strong>.</li>
+</ul>
+</li>
+<li><strong>Scan Records:</strong>
+<ul>
+<li>Cloudflare will automatically scan existing DNS records.</li>
+<li>Click <strong>Continue</strong> to proceed to DNS review.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="step-2-configure-accurate-dns-records">Step 2: Configure Accurate DNS Records</h2>
+<p>During domain migration, existing records from previous hosting providers (like old shared hosts) must be updated to your VPS IP.</p>
+<ol>
+<li>In the <strong>Review your DNS records</strong> screen:
+<ul>
+<li><strong>Root Domain Record:</strong>
+<ul>
+<li><strong>Type:</strong> <code>A</code></li>
+<li><strong>Name:</strong> <code>@</code> (or <code>aliridowan.com</code>)</li>
+<li><strong>IPv4 Address:</strong> <code>157.173.115.123</code> (Your VPS Public IP)</li>
+<li><strong>Proxy status:</strong> <strong>Proxied</strong> (Orange cloud enabled)</li>
+<li><strong>TTL:</strong> <code>Auto</code></li>
+</ul>
+</li>
+<li><strong>WWW Subdomain Record:</strong>
+<ul>
+<li><strong>Type:</strong> <code>CNAME</code></li>
+<li><strong>Name:</strong> <code>www</code></li>
+<li><strong>Target:</strong> <code>aliridowan.com</code></li>
+<li><strong>Proxy status:</strong> <strong>Proxied</strong> (Orange cloud enabled)</li>
+<li><strong>TTL:</strong> <code>Auto</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Delete Old / Conflicting Records:</strong>
+<ul>
+<li>If any old <code>A</code> record points to an outdated IP (e.g. <code>103.65.139.18</code>), edit or delete it immediately.</li>
+</ul>
+</li>
+<li>Click <strong>Continue to activation</strong>.</li>
+</ol>
+<hr />
+<h2 id="step-3-update-nameservers-at-your-domain-registrar">Step 3: Update Nameservers at Your Domain Registrar</h2>
+<p>Cloudflare will provide two authoritative nameservers (for example: <code>gina.ns.cloudflare.com</code> and <code>todd.ns.cloudflare.com</code>).</p>
+<ol>
+<li>Log in to the registrar where you purchased <code>aliridowan.com</code> (e.g., Namecheap, Hostinger, GoDaddy, Porkbun).</li>
+<li>Find the <strong>DNS Management</strong> or <strong>Nameserver</strong> section for <code>aliridowan.com</code>.</li>
+<li>Switch nameservers from <strong>Default Registrar DNS</strong> to <strong>Custom DNS</strong>.</li>
+<li>Enter the two Cloudflare nameservers provided.</li>
+<li>Save changes.</li>
+<li>Return to Cloudflare and click <strong>Done, check nameservers</strong>.</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Nameserver propagation typically takes between 5 to 30 minutes, though global registrar propagation can take up to 24 hours.</p>
+</blockquote>
+<hr />
+<h2 id="step-4-configure-the-site-in-aapanel">Step 4: Configure the Site in aaPanel</h2>
+<ol>
+<li><strong>Access aaPanel:</strong>
+<ul>
+<li>Navigate to your aaPanel panel: <code>http://157.173.115.123:27570/&lt;security_entrance&gt;</code></li>
+</ul>
+</li>
+<li><strong>Add Website:</strong>
+<ul>
+<li>
+<p>Click <strong>Website</strong> in the left sidebar.</p>
+</li>
+<li>
+<p>Under the <strong>PHP Project</strong> (or <strong>Static</strong>) tab, click <strong>Add site</strong>.</p>
+</li>
+<li>
+<p><strong>Domain:</strong></p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="plain"><span class="giallo-l"><span>aliridowan.com</span></span>
+<span class="giallo-l"><span>www.aliridowan.com</span></span></code></pre></li>
+<li>
+<p><strong>Description:</strong> <code>aliridowan_portfolio</code></p>
+</li>
+<li>
+<p><strong>Root Directory:</strong> Default is <code>/www/wwwroot/aliridowan.com</code></p>
+</li>
+<li>
+<p><strong>FTP / Database:</strong> Leave as <code>Do not create</code> (not needed for static frontends).</p>
+</li>
+<li>
+<p><strong>PHP Version:</strong> Select <code>Static</code> (or leave default; Nginx handles delivery directly).</p>
+</li>
+<li>
+<p>Click <strong>Submit</strong>.</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="step-5-build-deploy-your-react-portfolio">Step 5: Build &amp; Deploy Your React Portfolio</h2>
+<h3 id="1-build-locally">1. Build Locally</h3>
+<p>Inside your React project directory on your development machine:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #6272A4;"># If using Vite</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">npm</span><span style="color: #F1FA8C;"> run build</span></span>
+<span class="giallo-l"><span style="color: #6272A4;"># Output directory: ./dist</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span style="color: #6272A4;"># If using Create React App</span></span>
+<span class="giallo-l"><span style="color: #50FA7B;">npm</span><span style="color: #F1FA8C;"> run build</span></span>
+<span class="giallo-l"><span style="color: #6272A4;"># Output directory: ./build</span></span></code></pre><h3 id="2-upload-to-vps-via-aapanel">2. Upload to VPS via aaPanel</h3>
+<ol>
+<li>In aaPanel, navigate to <strong>Files</strong> &gt; <code>/www/wwwroot/aliridowan.com</code>.</li>
+<li>Delete the default files (<code>index.html</code>, <code>404.html</code>, <code>.htaccess</code>).</li>
+<li>Click <strong>Upload</strong> and upload your production files:
+<ul>
+<li>Ensure <code>index.html</code> resides directly in <code>/www/wwwroot/aliridowan.com/index.html</code>.</li>
+<li>Ensure the <code>assets/</code> or <code>static/</code> folders sit alongside <code>index.html</code>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-setup-single-page-app-spa-url-rewrite">3. Setup Single Page App (SPA) URL Rewrite</h3>
+<p>If your portfolio uses React Router (e.g. <code>/projects</code>, <code>/about</code>), refreshing any page will cause a <code>404 Not Found</code> without Nginx rewrite rules.</p>
+<ol>
+<li>
+<p>Go to <strong>Website</strong> &gt; click on <strong>aliridowan.com</strong>.</p>
+</li>
+<li>
+<p>Select <strong>URL rewrite</strong> from the left tab.</p>
+</li>
+<li>
+<p>Add the following rule:</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="nginx"><span class="giallo-l"><span style="color: #FF79C6;">location</span><span> / {</span></span>
+<span class="giallo-l"><span style="color: #FF79C6;">    try_files</span><span> $uri $uri/ /index.html;</span></span>
+<span class="giallo-l"><span>}</span></span></code></pre></li>
+<li>
+<p>Click <strong>Save</strong>.</p>
+</li>
+</ol>
+<hr />
+<h2 id="step-6-configure-ssl-tls-cloudflare-aapanel">Step 6: Configure SSL/TLS (Cloudflare &amp; aaPanel)</h2>
+<p>To ensure secure HTTPS without redirect loops (<code>ERR_TOO_MANY_REDIRECTS</code>), follow these configurations:</p>
+<h3 id="method-a-cloudflare-origin-ca-recommended-for-best-security">Method A: Cloudflare Origin CA (Recommended for Best Security)</h3>
+<ol>
+<li><strong>In Cloudflare Dashboard:</strong>
+<ul>
+<li>Go to <strong>SSL/TLS</strong> &gt; <strong>Origin Server</strong>.</li>
+<li>Click <strong>Create Certificate</strong>.</li>
+<li>Keep default hostnames (<code>aliridowan.com</code>, <code>*.aliridowan.com</code>) and 15-year validity.</li>
+<li>Click <strong>Create</strong>.</li>
+<li>Cloudflare displays an <strong>Origin Certificate</strong> and a <strong>Private Key</strong>.</li>
+</ul>
+</li>
+<li><strong>In aaPanel:</strong>
+<ul>
+<li>Go to <strong>Website</strong> &gt; <strong>aliridowan.com</strong> &gt; <strong>SSL</strong> tab.</li>
+<li>Click <strong>Business certificate</strong> (or manual entry).</li>
+<li>Paste the <strong>Private Key</strong> into the <code>Private key (KEY)</code> field.</li>
+<li>Paste the <strong>Origin Certificate</strong> into the <code>Certificate (CRT/PEM)</code> field.</li>
+<li>Click <strong>Save and enable SSL</strong>.</li>
+</ul>
+</li>
+<li><strong>Set Cloudflare SSL Mode:</strong>
+<ul>
+<li>In Cloudflare, go to <strong>SSL/TLS</strong> &gt; <strong>Overview</strong>.</li>
+<li>Select <strong>Full (strict)</strong>.</li>
+<li>Under <strong>SSL/TLS</strong> &gt; <strong>Edge Certificates</strong>, enable <strong>Always Use HTTPS</strong>.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="method-b-flexible-ssl-quick-setup">Method B: Flexible SSL (Quick Setup)</h3>
+<p>If you do not want to install a certificate on aaPanel right away:</p>
+<ol>
+<li>In Cloudflare, set <strong>SSL/TLS mode</strong> to <strong>Flexible</strong>.</li>
+<li>Traffic between browser and Cloudflare is encrypted (HTTPS).</li>
+<li>Cloudflare reaches your VPS over port 80 (HTTP).</li>
+<li><em>Important:</em> Do not enable force-HTTPS redirects on aaPanel when using Flexible mode, as this creates an infinite loop.</li>
+</ol>
+<hr />
+<h2 id="step-7-verification-testing-checklist">Step 7: Verification &amp; Testing Checklist</h2>
+<ul>
+<li>
+<p><input disabled="" type="checkbox"/>
+<strong>DNS Resolution:</strong></p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;" ><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">curl</span><span style="color: #BD93F9;"> -I</span><span style="color: #F1FA8C;"> https://aliridowan.com</span></span></code></pre>
+<p>Check that the HTTP response returns <code>200 OK</code> and headers include <code>server: cloudflare</code>.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"/>
+<strong>Proxy Verification:</strong>
+Pinging <code>aliridowan.com</code> returns a Cloudflare anycast IP (e.g. <code>104.x.x.x</code> or <code>172.x.x.x</code>), successfully masking your origin VPS IP (<code>157.173.115.123</code>).</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"/>
+<strong>SPA Route Refresh:</strong>
+Navigate to an internal route (e.g., <code>https://aliridowan.com/about</code>) and reload to verify client routing handles the path seamlessly.</p>
+</li>
+<li>
+<p><input disabled="" type="checkbox"/>
+<strong>SSL Grade:</strong>
+Confirm green padlock status on both <code>https://aliridowan.com</code> and <code>https://www.aliridowan.com</code>.</p>
+</li>
+</ul>
+<hr />
+<h2 id="common-troubleshooting">Common Troubleshooting</h2>
+<table><thead><tr><th>Issue</th><th>Cause</th><th>Fix</th></tr></thead><tbody>
+<tr><td><strong>Old host page displays</strong></td><td>Cloudflare <code>A</code> record points to old provider IP or local DNS cache.</td><td>Update Cloudflare <code>A</code> record to <code>157.173.115.123</code>, flush DNS (<code>ipconfig /flushdns</code> or browser cache).</td></tr>
+<tr><td><strong><code>ERR_TOO_MANY_REDIRECTS</code></strong></td><td>Cloudflare is set to <em>Flexible</em>, while aaPanel Nginx forces HTTPS.</td><td>Change Cloudflare SSL to <strong>Full</strong> / <strong>Full (strict)</strong>, or disable origin-level HTTPS redirection.</td></tr>
+<tr><td><strong><code>404 Not Found</code> on refresh</strong></td><td>Single Page Application route missing Nginx rewrite.</td><td>Add <code>try_files $uri $uri/ /index.html;</code> in aaPanel <strong>URL rewrite</strong>.</td></tr>
+<tr><td><strong><code>521 Web Server Is Down</code></strong></td><td>Nginx stopped or VPS firewall blocking ports 80/443.</td><td>Check Nginx status in aaPanel; run <code>ufw allow 80/tcp</code> and <code>ufw allow 443/tcp</code> on your VPS.</td></tr>
+</tbody></table>
+
+    </div>
+
+    
+</article>
+
+<script>
+// Auto-generate Table of Contents - LT Blog Style
+document.addEventListener('DOMContentLoaded', function() {
+    const content = document.querySelector('.content');
+    const desktopTocList = document.getElementById('desktop-toc-list');
+    const mobileTocList = document.getElementById('mobile-toc-list');
+    const desktopToc = document.getElementById('desktop-toc');
+    const mobileToc = document.getElementById('mobile-toc');
+
+    if (!content || !desktopTocList || !mobileTocList) return;
+
+    const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+    if (headings.length === 0) {
+        if (desktopToc) desktopToc.style.display = 'none';
+        if (mobileToc) mobileToc.style.display = 'none';
+        return;
+    }
+
+    const createToc = (tocList) => {
+        let currentLevel = 0;
+        let currentUl = tocList;
+        let levelStack = [tocList];
+
+        headings.forEach((heading, index) => {
+            if (!heading.id) {
+                heading.id = 'heading-' + index;
+            }
+
+            const level = parseInt(heading.tagName.charAt(1));
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#' + heading.id;
+            a.textContent = heading.textContent;
+            a.className = 'toc-' + heading.tagName.toLowerCase();
+
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                heading.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+
+            if (level > currentLevel) {
+                const nestedUl = document.createElement('ul');
+                if (levelStack[levelStack.length - 1].lastElementChild) {
+                    levelStack[levelStack.length - 1].lastElementChild.appendChild(nestedUl);
+                } else {
+                    levelStack[levelStack.length - 1].appendChild(nestedUl);
+                }
+                levelStack.push(nestedUl);
+                currentUl = nestedUl;
+            } else if (level < currentLevel) {
+                while (levelStack.length > level && levelStack.length > 1) {
+                    levelStack.pop();
+                }
+                currentUl = levelStack[levelStack.length - 1];
+            }
+
+            currentLevel = level;
+            li.appendChild(a);
+            currentUl.appendChild(li);
+        });
+    };
+
+    createToc(desktopTocList);
+    createToc(mobileTocList);
+});
+</script>
+
+<style>
+/* Additional TOC styling specific to different heading levels */
+.toc-h1 { font-weight: bold; color: #e6edf3 !important; }
+.toc-h2 { font-weight: normal; color: #c478ff !important; }
+.toc-h3 { font-weight: normal; color: #8b949e !important; }
+.toc-h4, .toc-h5, .toc-h6 { font-weight: normal; color: #7d8590 !important; }
+</style>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger-button');
+            const navDrawer = document.getElementById('nav-drawer');
+
+            if (hamburger && navDrawer) {
+                hamburger.addEventListener('click', function() {
+                    hamburger.classList.toggle('is-active');
+                    navDrawer.classList.toggle('is-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
